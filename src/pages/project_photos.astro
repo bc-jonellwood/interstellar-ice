@@ -1,6 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Card from '../components/Card.astro';
+import PhotoGallery from '../components/PhotoGallery.astro';
 
 ---
 <Layout title="Project Photos">
@@ -9,13 +10,16 @@ import Card from '../components/Card.astro';
 			<h1 class="text-gradient">Project Photos</h1>
 		</div>
 		
-		<Card 
+		<!-- <Card 
 		href="#"
 		title="TO DO:"
 		body="I am thinking a cool interactive mosiac type interface that shows all the photos - with a filter for each project? Or someway to interact that makes it enjoyable and more than just a carousel of photos."
-		/>
+		/> -->
+		<PhotoGallery />
     </main>
 </Layout>
+
+ 
 <style>
 	main {
 		margin: auto;
@@ -50,28 +54,5 @@ import Card from '../components/Card.astro';
 		background-size: 400%;
 		background-position: 0%;
 	}
-	.instructions {
-		margin-bottom: 2rem;
-		border: 1px solid rgba(var(--accent-light), 25%);
-		background: linear-gradient(rgba(var(--accent-dark), 66%), rgba(var(--accent-dark), 33%));
-		padding: 1.5rem;
-		border-radius: 8px;
-	}
-	.instructions code {
-		font-size: 0.8em;
-		font-weight: bold;
-		background: rgba(var(--accent-light), 12%);
-		color: rgb(var(--accent-light));
-		border-radius: 4px;
-		padding: 0.3em 0.4em;
-	}
-	.instructions strong {
-		color: rgb(var(--accent-light));
-	}
-	.link-card-grid {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
-		gap: 2rem;
-		padding: 0;
-	}
+	
 </style>
