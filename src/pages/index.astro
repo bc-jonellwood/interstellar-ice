@@ -1,19 +1,11 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Card from '../components/Card.astro';
+
 ---
 
-<Layout title="Welcome to Astro.">
-	<main>
-		<svg
-			class="astro-a"
-			width="495"
-			height="623"
-			viewBox="0 0 495 623"
-			fill="none"
-			xmlns="http://www.w3.org/2000/svg"
-			aria-hidden="true"
-		>
+<Layout title="One Cent Sale Tax">
+	<main transition:animate="slide">
 			<path
 				fill-rule="evenodd"
 				clip-rule="evenodd"
@@ -33,33 +25,34 @@ import Card from '../components/Card.astro';
 				</linearGradient>
 			</defs>
 		</svg>
-		<h1>Welcome to <span class="text-gradient">Astro</span></h1>
-		<p class="instructions">
-			To get started, open the directory <code>src/pages</code> in your project.<br />
-			<strong>Code Challenge:</strong> Tweak the "Welcome to Astro" message above.
-		</p>
-		<ul role="list" class="link-card-grid">
+		<div class="h1-holder" transition:name='home-heading'>
+			<h1 class="text-gradient" >One Cent Sales Tax Program</h1>
+			<img src="./road.png" alt="road" width="100%"/>
+		</div>
+		<Card 
+		href="#"
+		title="TO DO:"
+		body="Video will be added here."
+		/>
+		<!-- <ul role="list" class="link-card-grid">
+		
 			<Card
-				href="https://docs.astro.build/"
-				title="Documentation"
-				body="Learn how Astro works and explore the official API docs."
+				href="https://berkeleycountysc.gov/"
+				title="County Main Page"
+				body="See the main website."
 			/>
 			<Card
-				href="https://astro.build/integrations/"
-				title="Integrations"
-				body="Supercharge your project with new frameworks and libraries."
+				href="https://www.scdot.org/"
+				title="SCDOT WebSite"
+				body="Learn where roads are and stuff."
 			/>
-			<Card
-				href="https://astro.build/themes/"
-				title="Themes"
-				body="Explore a galaxy of community-built starter themes."
-			/>
-			<Card
-				href="https://astro.build/chat/"
-				title="Community"
-				body="Come say hi to our amazing Discord community. ❤️"
-			/>
-		</ul>
+			
+		</ul> -->
+		<div class="text-holder">
+		<p> Also known as the "Penny Sales Tax," the One Cent Sales Tax (OCST) equates to paying one penny per $1 on a taxable item's purchase price. The taxes collected help fund roadway, infrastructure, and greenbelt preservation projects throughout Berkeley County.</p>
+		<p>Berkeley County's One Cent Sales Tax Program was established in 2008. Voters passed additional referendums in 2014 and 2022, approving the continuation ofthe program. For the first time in the OCST program, the 2022 referendum provides funding for greenbelt preservation projects.</p>
+		<p> Within the OCST program, the County also created the Dirt-to-Pave program,which paves roads often found in rural communities. To date, the county has completed 65 dirt-to-pave projects from both the 2008 and 2014 referendums.</p>
+		</div>
 	</main>
 </Layout>
 
@@ -72,6 +65,7 @@ import Card from '../components/Card.astro';
 		color: white;
 		font-size: 20px;
 		line-height: 1.6;
+		margin-top: -15%;
 	}
 	.astro-a {
 		position: absolute;
@@ -82,10 +76,17 @@ import Card from '../components/Card.astro';
 		height: auto;
 		z-index: -1;
 	}
+	/* .h1-holder {
+		padding-top: .5rem;
+		padding-bottom: .5rem;
+		margin-top: .5rem;
+		margin-bottom: 10px;
+		background-color: #00000050;
+	} */
 	h1 {
-		font-size: 4rem;
+		font-size: 3rem;
 		font-weight: 700;
-		line-height: 1;
+		line-height: 1.25;
 		text-align: center;
 		margin-bottom: 1em;
 	}
@@ -119,5 +120,14 @@ import Card from '../components/Card.astro';
 		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
 		gap: 2rem;
 		padding: 0;
+	}
+	.text-holder{
+		background-color: #00000050;
+		padding-left: 1rem;
+		padding-right: 1rem;
+		border: 1px solid aliceblue;
+		border-radius:5px;
+		margin-top: 1rem;
+
 	}
 </style>

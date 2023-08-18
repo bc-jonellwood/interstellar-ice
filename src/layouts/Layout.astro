@@ -4,6 +4,10 @@ interface Props {
 }
 
 const { title } = Astro.props;
+import NavItem from '../components/NavItem.astro';
+import Head from '../components/Head.astro';
+import { ViewTransitions } from 'astro:transitions';
+
 ---
 
 <!DOCTYPE html>
@@ -12,28 +16,158 @@ const { title } = Astro.props;
 		<meta charset="UTF-8" />
 		<meta name="description" content="Astro description">
 		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		
+		<!-- <link rel="icon" type="image/svg+xml" href="/favicon.svg" /> -->
+		<link rel="icon" type="png" href="/bw.png" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
+		<ViewTransitions />
 	</head>
 	<body>
-		<slot />
+		<!-- <Head/> -->
+		<nav class="side-nav">
+            <ul role="list" class="link-card-grid">
+                <NavItem
+				title="Home"
+				href="/#"
+				transition:name='home-heading'
+				/>
+                <NavItem
+				title="Frequently Asked Questions"
+				href="./faq"
+				transition:name='faq-heading'
+				/>
+                <NavItem
+				title="Interactive Project Dashboard"
+				href="./project_dashboard"
+				transition:name='dash-heading'
+				/>
+                <NavItem
+				title="2014 Referendum Projects"
+				href="./2014_ref"
+				transition:name='2014-heading'
+				/>
+                <NavItem
+				title="2022 Referendum Projects"
+				href="./2022_ref"
+				transition:name='ref22-heading'
+				/>
+                <NavItem
+				title="Projects in Photos"
+				href="./project_photos"
+				transition:name='pics-heading'
+				/>
+                <NavItem
+				title="Roadway Petition Forms"
+				href="./road_petition"
+				transition:name='pet-heading'
+				/>
+                <NavItem
+				title="Contact Us"
+				href="./contact"
+				/>
+            </ul>
+        </nav>
+		<div class="container">
+			<slot />
+		</div>
 	</body>
 </html>
 <style is:global>
 	:root {
-		--accent: 136, 58, 234;
-		--accent-light: 224, 204, 250;
-		--accent-dark: 49, 10, 101;
+		--accent: 255, 215, 0;
+		--accent-light: 88, 201, 232;
+		--accent-dark: 0, 85, 119;
 		--accent-gradient: linear-gradient(45deg, rgb(var(--accent)), rgb(var(--accent-light)) 30%, white 60%);
+		
 	}
 	html {
-		font-family: system-ui, sans-serif;
-		background: #13151A;
+		/* font-family: system-ui, sans-serif; */
+		font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+		/* background: #13151A; */
+		background: rgb(var(--background-gradient));
 		background-size: 224px;
+		
+		
+	}
+	body {
+		margin: 0;
+		margin-top: 20px;
+		padding: 0;
+		background-image: 
+		radial-gradient(
+		farthest-corner circle at 0% 0%, 
+		#198bbf84 0%, 26%, #198bbf88 0% 0%, 47%, #198bbf92 0% 0%, 69%, #198bbf98 0% 0%, 89%, #005475 100%);
+		background-size: cover;
+		background-attachment: fixed;
 	}
 	code {
 		font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
 			Bitstream Vera Sans Mono, Courier New, monospace;
+	}
+
+	.link-card-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+		grid-gap: 1rem;
+	}
+	.question-card-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+		grid-gap: 1rem;
+	}
+	 nav{
+		display: flex;
+		font-size: larger;
+		width: 10%;
+		/* background-color: #23262d; */
+		background-color: #2e3952;
+		color: white;
+		padding: 20px;
+		box-sizing: border-box;
+		/* position: sticky; */
+		position: fixed;
+		top: 0;
+		/* moving down to see if looks better */
+		/* top: 248px; */
+		height: 100vh;
+		z-index: 1;
+		
+    }
+	.container {
+		display: flex;
+		height: calc(100vh - 20%);
+		position: relative;
+		margin-top: 17%;
+		/* position: fixed; */
+		/* top: 18%; */
+		/* left: 20%; */
+  	/*  controls the height of the container */
+   	}
+   ul{
+	padding-inline-start: 5px !important;
+   }
+   .h1-holder {
+		padding-top: .5rem;
+		padding-bottom: .5rem;
+		/* margin-top: .5rem; */
+		/* moving down to see if looks better */
+		/* margin-top: 12.5rem; */
+		margin-bottom: 15px;
+		background-color: #00000099;
+		/* background-color: rgb(var(--accent)); */
+		border: 1px solid rgb(var(--accent-light));
+		border-radius: 10px;
+
+	}
+	main {
+		margin: auto;
+		padding: 1rem;
+		width: 800px;
+		max-width: calc(100% - 2rem);
+		color: white;
+		font-size: 20px;
+		line-height: 1.6;
+		margin-top: -15%;
 	}
 </style>
