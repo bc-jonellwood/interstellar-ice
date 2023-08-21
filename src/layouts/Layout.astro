@@ -174,9 +174,11 @@ import { ViewTransitions } from 'astro:transitions';
 	.gallery-holder{
     display: grid;
     grid-template-rows: 100px 100px 100px 100px 100px 100px 100px 100px 100px 100px;
-    /* display: grid; */
-    /* width: 100%; */
-    /* overflow: hidden; */
+	/* border: 2px solid #005677; */
+	border-radius: 10px;
+	/* background: white; */
+    margin: 0;
+	padding: 0;
 }
 .close {
     background: none;
@@ -185,7 +187,7 @@ import { ViewTransitions } from 'astro:transitions';
 }
 .gallery {
     display: grid;
-    grid-row-start: 2;
+    grid-row-start: 1;
     grid-column-start: 1;
     grid-template-columns: repeat(auto-fill, 100px);
     grid-template-rows: 1fr;
@@ -193,6 +195,7 @@ import { ViewTransitions } from 'astro:transitions';
     grid-auto-flow: dense;
     z-index: 0; 
 	gap: 5px;
+	
 }
 .overlay.open{
     display: grid;
@@ -200,9 +203,10 @@ import { ViewTransitions } from 'astro:transitions';
 
 .item {
     display: grid;
-    grid-template-columns: 1;
-    grid-template-rows: 1;
+    /* grid-template-columns: 1; */
+    /* grid-template-rows: 1; */
     overflow: hidden;
+	
     /* max-width: 10px; */
 }
 .item img {
@@ -213,6 +217,9 @@ import { ViewTransitions } from 'astro:transitions';
   object-fit: cover;
   /* opacity: 0.3; */
   filter: blur(1px);
+  /* border: 1px solid var(--accent-dark); */
+  border-radius: 10px;
+  box-shadow: 0 0 10px 10px rgba(0, 0, 255, 1);
 }
 .item__overlay {
     /* background-color: #ece5cb32; */
