@@ -3,147 +3,140 @@ import Layout from "../layouts/Layout.astro";
 import Card from "../components/Card.astro";
 import Question from "../components/Question.astro";
 ---
+
 <Layout title="FAQ Page">
-    <main transition:animate="slide">
-        <div class="h1-holder" transition:name='faq-heading'>
-			<h1 class="text-gradient">FAQ Page</h1>
-		</div>
-		<div class="sign-container">
-			<img src="./astro.png" alt="astro" class="astro-a" />
-		</div>
-		<img src="./sign.png" alt="sign" class="sign-img" />
-		<ul role="list" class="question-card-grid">
-			<Question
-				title="What is the sales tax of which you speak"
-				body="See the main website."
-			/>
-			<Question
-				title="Where is my money going"
-				body="See the main website."
-			/>
-			<Question
-				title="Can you fix my privite drive"
-				body="See the main website."
-			/>
-			<Question
-				title="Is cereal soup"
-				body="See the main website."
-			/>
-			<Question
-				title="Would you rather wear socks on your ears or have spaghetti for legs"
-				body="See the main website."
-			/>
-			<Question
-				title="What is the best way to get rid of a body"
-				body="See the main website."
-			/>
-			<Question
-				title="When you are getting dressed is it sock-sock-shoe-shoe or sock-shoe-sock-shoe"
-				body="I think we all know there is really only one right answer to this question."
-			/>
-			<Question
-				title="Why does my Dad hate me"
-				body="See the main website."
-			/>
-		</ul>
-    </main>
+  <main transition:animate="slide">
+    <div class="h1-holder" transition:name="faq-heading">
+      <h1 class="text-gradient">FAQ Page</h1>
+    </div>
+    <div class="sign-container"></div>
+    <img src="./sign.png" alt="sign" class="sign-img" />
+    <ul role="list" class="question-card-grid">
+      <Question
+        title="What is the sales tax of which you speak"
+        body="See the main website."
+      />
+      <Question title="Where is my money going" body="See the main website." />
+      <Question
+        title="Can you fix my privite drive"
+        body="See the main website."
+      />
+      <Question title="Is cereal soup" body="See the main website." />
+      <Question
+        title="Would you rather wear socks on your ears or have spaghetti for legs"
+        body="See the main website."
+      />
+      <Question
+        title="What is the best way to get rid of a body"
+        body="See the main website."
+      />
+      <Question
+        title="When you are getting dressed is it sock-sock-shoe-shoe or sock-shoe-sock-shoe"
+        body="I think we all know there is really only one right answer to this question."
+      />
+      <Question title="Why does my Dad hate me" body="See the main website." />
+    </ul>
+  </main>
 </Layout>
 
 <style>
-	main {
-		margin: auto;
-		padding: 1rem;
-		width: 800px;
-		max-width: calc(100% - 2rem);
-		color: white;
-		font-size: 20px;
-		line-height: 1.6;
-		margin-top: -15%;
-	}
-	.astro-a {
-		position: absolute;
-		top: -32px;
-		left: 50%;
-		transform: translatex(-50%);
-		width: 220px;
-		height: auto;
-		z-index: -1;
-	}
-	h1 {
-		font-size: 3rem;
-		font-weight: 700;
-		line-height: 1.25;
-		text-align: center;
-		margin-bottom: 1em;
-	}
-	.text-gradient {
-		background-image: var(--accent-gradient);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		background-size: 400%;
-		background-position: 0%;
-	}
-	.instructions {
-		margin-bottom: 2rem;
-		border: 1px solid rgba(var(--accent-light), 25%);
-		background: linear-gradient(rgba(var(--accent-dark), 66%), rgba(var(--accent-dark), 33%));
-		padding: 1.5rem;
-		border-radius: 8px;
-	}
-	.instructions code {
-		font-size: 0.8em;
-		font-weight: bold;
-		background: rgba(var(--accent-light), 12%);
-		color: rgb(var(--accent-light));
-		border-radius: 4px;
-		padding: 0.3em 0.4em;
-	}
-	.instructions strong {
-		color: rgb(var(--accent-light));
-	}
-	.link-card-grid {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
-		gap: 2rem;
-		padding: 0;
-	}
-	.sign-container {
-		position: absolute;
-		z-index: 2;
-		width: 100%;
-		height: 100vh;
-		overflow: hidden;
-	}
-	.sign-img{
-		position: absolute;
-		width: 300px;
-		z-index: 3;
-		margin-left: -6%;
-		/* margin-top: -20%; */
-		margin-top: -500px;
-		transform: rotate(-20deg);
-		transform: translateX(-50%);
-  		animation: dropBounce 1.5s cubic-bezier(0.68, -0.55, 0.27, 1.55) forwards;
-	}
-		@keyframes dropBounce {
-			0% {
-				top: -500px;
-				opacity: 0;
-			}
-			60% {
-				top: 40%;
-				opacity: .5;
-				transform: rotate(-5deg);
-			}
-			80% {
-				top: 42%;
-				opacity: 1;
-				transform: rotate(-10deg);
-			}
-			100% {
-				top: 45%;
-				transform: rotate(-20deg);
-			}
-		}
-
+  main {
+    margin: auto;
+    padding: 1rem;
+    width: 800px;
+    max-width: calc(100% - 2rem);
+    color: white;
+    font-size: 20px;
+    line-height: 1.6;
+    margin-top: -15%;
+  }
+  .astro-a {
+    position: absolute;
+    top: -32px;
+    left: 50%;
+    transform: translatex(-50%);
+    width: 220px;
+    height: auto;
+    z-index: -1;
+  }
+  h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 1.25;
+    text-align: center;
+    margin-bottom: 1em;
+  }
+  .text-gradient {
+    background-image: var(--accent-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 400%;
+    background-position: 0%;
+  }
+  .instructions {
+    margin-bottom: 2rem;
+    border: 1px solid rgba(var(--accent-light), 25%);
+    background: linear-gradient(
+      rgba(var(--accent-dark), 66%),
+      rgba(var(--accent-dark), 33%)
+    );
+    padding: 1.5rem;
+    border-radius: 8px;
+  }
+  .instructions code {
+    font-size: 0.8em;
+    font-weight: bold;
+    background: rgba(var(--accent-light), 12%);
+    color: rgb(var(--accent-light));
+    border-radius: 4px;
+    padding: 0.3em 0.4em;
+  }
+  .instructions strong {
+    color: rgb(var(--accent-light));
+  }
+  .link-card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
+    gap: 2rem;
+    padding: 0;
+  }
+  .sign-container {
+    position: absolute;
+    z-index: 2;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+  }
+  .sign-img {
+    position: absolute;
+    width: 300px;
+    z-index: 3;
+    margin-left: -6%;
+    /* margin-top: -20%; */
+    margin-top: -500px;
+    transform: rotate(-20deg);
+    transform: translateX(-50%);
+    animation: dropBounce 1.5s cubic-bezier(0.68, -0.55, 0.27, 1.55) forwards;
+    animation-delay: 1s;
+  }
+  @keyframes dropBounce {
+    0% {
+      top: -500px;
+      opacity: 0;
+    }
+    60% {
+      top: 40%;
+      opacity: 0.5;
+      transform: rotate(-5deg);
+    }
+    80% {
+      top: 42%;
+      opacity: 1;
+      transform: rotate(-10deg);
+    }
+    100% {
+      top: 45%;
+      transform: rotate(-20deg);
+    }
+  }
 </style>

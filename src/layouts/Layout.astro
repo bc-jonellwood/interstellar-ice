@@ -1,298 +1,294 @@
---- 
+---
 interface Props {
-	title: string;
+  title: string;
 }
 
 const { title } = Astro.props;
-import NavItem from '../components/NavItem.astro';
-import Head from '../components/Head.astro';
-import { ViewTransitions } from 'astro:transitions';
-
+import NavItem from "../components/NavItem.astro";
+import Head from "../components/Head.astro";
+import { ViewTransitions } from "astro:transitions";
 ---
 
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="description" content="Astro description">
-		<meta name="viewport" content="width=device-width" />
-		
-		<!-- <link rel="icon" type="image/svg+xml" href="/favicon.svg" /> -->
-		<link rel="icon" type="png" href="/bw.png" />
-		<meta name="generator" content={Astro.generator} />
-		<title>{title}</title>
-		<ViewTransitions />
-	</head>
-	<body>
-		<!-- <Head/> -->
-		<nav class="side-nav">
-            <ul role="list" class="link-card-grid">
-                <NavItem
-				title="Home"
-				href="/#"
-				transition:name='home-heading'
-				/>
-                <NavItem
-				title="Frequently Asked Questions"
-				href="./faq"
-				transition:name='faq-heading'
-				/>
-                <NavItem
-				title="Interactive Project Dashboard"
-				href="./project_dashboard"
-				transition:name='dash-heading'
-				/>
-                <NavItem
-				title="2014 Referendum Projects"
-				href="./2014_ref"
-				transition:name='2014-heading'
-				/>
-                <NavItem
-				title="2022 Referendum Projects"
-				href="./2022_ref"
-				transition:name='ref22-heading'
-				/>
-                <NavItem
-				title="Projects in Photos"
-				href="./project_photos"
-				transition:name='pics-heading'
-				/>
-                <NavItem
-				title="Roadway Petition Forms"
-				href="./road_petition"
-				transition:name='pet-heading'
-				/>
-                <NavItem
-				title="Contact Us"
-				href="./contact"
-				/>
-            </ul>
-        </nav>
-		<div class="container">
-			<slot />
-		</div>
-	</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Astro description" />
+    <meta name="viewport" content="width=device-width" />
+
+    <!-- <link rel="icon" type="image/svg+xml" href="/favicon.svg" /> -->
+    <link rel="icon" type="png" href="/bw.png" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+    <ViewTransitions />
+  </head>
+  <body>
+    <!-- <Head/> -->
+    <nav class="side-nav">
+      <ul role="list" class="link-card-grid">
+        <NavItem title="Home" href="/#" transition:name="home-heading" />
+        <NavItem
+          title="Frequently Asked Questions"
+          href="./faq"
+          transition:name="faq-heading"
+        />
+        <NavItem
+          title="Interactive Project Dashboard"
+          href="./project_dashboard"
+          transition:name="dash-heading"
+        />
+        <NavItem
+          title="2014 Referendum Projects"
+          href="./2014_ref"
+          transition:name="2014-heading"
+        />
+        <NavItem
+          title="2022 Referendum Projects"
+          href="./2022_ref"
+          transition:name="ref22-heading"
+        />
+        <NavItem
+          title="Projects in Photos"
+          href="./project_photos"
+          transition:name="pics-heading"
+        />
+        <NavItem
+          title="Roadway Petition Forms"
+          href="./road_petition"
+          transition:name="pet-heading"
+        />
+        <NavItem title="Contact Us" href="./contact" />
+      </ul>
+    </nav>
+    <div class="container">
+      <slot />
+    </div>
+    <style is:global>
+      :root {
+        --accent: 255, 215, 0;
+        --accent-light: 88, 201, 232;
+        --accent-dark: 0, 85, 119;
+        --accent-gradient: linear-gradient(
+          45deg,
+          rgb(var(--accent)),
+          rgb(var(--accent-light)) 30%,
+          white 60%
+        );
+      }
+      html {
+        /* font-family: system-ui, sans-serif; */
+        font-family:
+          system-ui,
+          -apple-system,
+          BlinkMacSystemFont,
+          "Segoe UI",
+          Roboto,
+          Oxygen,
+          Ubuntu,
+          Cantarell,
+          "Open Sans",
+          "Helvetica Neue",
+          sans-serif;
+        /* background: #13151A; */
+        background: rgb(var(--background-gradient));
+        background-size: 224px;
+      }
+      body {
+        margin: 0;
+        margin-top: 20px;
+        padding: 0;
+        background-image: radial-gradient(
+          farthest-corner circle at 0% 0%,
+          #198bbf84 0%,
+          26%,
+          #198bbf88 0% 0%,
+          47%,
+          #198bbf92 0% 0%,
+          69%,
+          #198bbf98 0% 0%,
+          89%,
+          #005475 100%
+        );
+        background-size: cover;
+        background-attachment: fixed;
+      }
+      code {
+        font-family:
+          Menlo,
+          Monaco,
+          Lucida Console,
+          Liberation Mono,
+          DejaVu Sans Mono,
+          Bitstream Vera Sans Mono,
+          Courier New,
+          monospace;
+      }
+
+      .link-card-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        grid-gap: 1rem;
+      }
+      .question-card-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        grid-gap: 1rem;
+      }
+      nav {
+        display: flex;
+        font-size: larger;
+        width: 10%;
+        /* background-color: #23262d; */
+        background-color: #2e3952;
+        color: white;
+        padding: 20px;
+        box-sizing: border-box;
+        /* position: sticky; */
+        position: fixed;
+        top: 0;
+        /* moving down to see if looks better */
+        /* top: 248px; */
+        height: 100vh;
+        z-index: 1;
+      }
+      .container {
+        display: flex;
+        height: calc(100vh - 20%);
+        position: relative;
+        margin-top: 17%;
+        /* position: fixed; */
+        /* top: 18%; */
+        /* left: 20%; */
+        /*  controls the height of the container */
+      }
+      ul {
+        padding-inline-start: 5px !important;
+      }
+      .h1-holder {
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+        /* margin-top: .5rem; */
+        /* moving down to see if looks better */
+        /* margin-top: 12.5rem; */
+        margin-bottom: 15px;
+        background-color: #00000099;
+        /* background-color: rgb(var(--accent)); */
+        border: 1px solid rgb(var(--accent-light));
+        border-radius: 10px;
+      }
+      main {
+        margin: auto;
+        padding: 1rem;
+        width: 800px;
+        max-width: calc(100% - 2rem);
+        color: white;
+        font-size: 20px;
+        line-height: 1.6;
+        margin-top: -15%;
+      }
+      /* #####################IMg##g@ll3ry############################# */
+      .gallery {
+        display: grid;
+        grid-template-columns: 175px 175px 175px 175px;
+        gap: 30px;
+        margin: 0;
+        padding: 0;
+        /* box-shadow: 0 0 10px 10px rgba(0, 0, 0, 0.125); */
+      }
+
+      .gallery img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        opacity: 0.8;
+        /* filter: blur(1px); */
+        /* border-radius: 5px; */
+
+        /* box-shadow: 0 0 1px 2px rgba(0, 0, 0, 0.5); */
+        box-shadow:
+          25px 25px 75px rgba(0, 0, 0, 0.25),
+          10px 10px 70px rgba(0, 0, 0, 0.25),
+          inset 5px 5px 10px rgba(0, 0, 0, 0.5),
+          inset 5px 5px 20px rgba(255, 255, 255, 0.2),
+          inset -5px -5px 15px rgba(0, 0, 0, 0.75);
+      }
+      .gallery .img-holder:hover {
+        opacity: 1;
+        filter: blur(0);
+        box-shadow: 0 0 1px 2px rgba(0, 0, 0, 0.5);
+      }
+      .img-holder {
+        border: 5px solid white;
+        border-bottom: 20px solid white;
+        border-radius: 5px;
+        box-shadow:
+          rgba(0, 0, 0, 0.3) 0px 19px 38px,
+          rgba(0, 0, 0, 0.22) 0px 15px 12px;
+      }
+      /* ##################################################### */
+      /* ::view-transition-old(*),
+      ::view-transition-new(*) {
+        animation: none;
+        mix-blend-mode: normal;
+        height: 100%;
+        overflow: clip;
+      }
+      ::view-transition-old(*) {
+        object-fit: contain;
+      }
+
+      ::view-transition-new(*) {
+        object-fit: cover;
+      } */
+      .img--expanded {
+        /* width: 40rem; */
+        grid-column: span 4;
+        grid-row: span 4;
+        border-radius: 5px;
+
+        /* box-shadow: 1px 1px 11px 1px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: 1px 1px 11px 1px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 1px 1px 11px 1px rgba(0, 0, 0, 0.75); */
+      }
+      .img--expanded img {
+        opacity: 1;
+      }
+
+      .img--expanded .img__img {
+        transform: scale(1.03);
+      }
+
+      @keyframes fadeIn {
+        0% {
+          opacity: 0;
+          transform: scale(0);
+        }
+
+        100% {
+          opacity: 1;
+          transform: scale(1);
+        }
+      }
+
+      .fade-in {
+        opacity: 0;
+        animation: fadeIn 1.9s forwards;
+        animation-delay: 0.9s;
+      }
+
+      .img {
+        /* cursor: pointer; */
+        /* overflow: hidden; */
+        position: relative;
+      }
+
+      .img > * {
+        pointer-events: none;
+      }
+
+      .img__img {
+        transition: transform 1s;
+      }
+    </style>
+  </body>
 </html>
-<style is:global>
-	:root {
-		--accent: 255, 215, 0;
-		--accent-light: 88, 201, 232;
-		--accent-dark: 0, 85, 119;
-		--accent-gradient: linear-gradient(45deg, rgb(var(--accent)), rgb(var(--accent-light)) 30%, white 60%);
-		
-	}
-	html {
-		/* font-family: system-ui, sans-serif; */
-		font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-		/* background: #13151A; */
-		background: rgb(var(--background-gradient));
-		background-size: 224px;
-		
-		
-	}
-	body {
-		margin: 0;
-		margin-top: 20px;
-		padding: 0;
-		background-image: 
-		radial-gradient(
-		farthest-corner circle at 0% 0%, 
-		#198bbf84 0%, 26%, #198bbf88 0% 0%, 47%, #198bbf92 0% 0%, 69%, #198bbf98 0% 0%, 89%, #005475 100%);
-		background-size: cover;
-		background-attachment: fixed;
-	}
-	code {
-		font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
-			Bitstream Vera Sans Mono, Courier New, monospace;
-	}
-
-	.link-card-grid {
-		display: grid;
-		grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-		grid-gap: 1rem;
-	}
-	.question-card-grid {
-		display: grid;
-		grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-		grid-gap: 1rem;
-	}
-	 nav{
-		display: flex;
-		font-size: larger;
-		width: 10%;
-		/* background-color: #23262d; */
-		background-color: #2e3952;
-		color: white;
-		padding: 20px;
-		box-sizing: border-box;
-		/* position: sticky; */
-		position: fixed;
-		top: 0;
-		/* moving down to see if looks better */
-		/* top: 248px; */
-		height: 100vh;
-		z-index: 1;
-		
-    }
-	.container {
-		display: flex;
-		height: calc(100vh - 20%);
-		position: relative;
-		margin-top: 17%;
-		/* position: fixed; */
-		/* top: 18%; */
-		/* left: 20%; */
-  	/*  controls the height of the container */
-   	}
-   ul{
-	padding-inline-start: 5px !important;
-   }
-   .h1-holder {
-		padding-top: .5rem;
-		padding-bottom: .5rem;
-		/* margin-top: .5rem; */
-		/* moving down to see if looks better */
-		/* margin-top: 12.5rem; */
-		margin-bottom: 15px;
-		background-color: #00000099;
-		/* background-color: rgb(var(--accent)); */
-		border: 1px solid rgb(var(--accent-light));
-		border-radius: 10px;
-
-	}
-	main {
-		margin: auto;
-		padding: 1rem;
-		width: 800px;
-		max-width: calc(100% - 2rem);
-		color: white;
-		font-size: 20px;
-		line-height: 1.6;
-		margin-top: -15%;
-	}
-	/* ################################################### */
-	.gallery-holder{
-    display: grid;
-    grid-template-rows: 100px 100px 100px 100px 100px 100px 100px 100px 100px 100px;
-	/* border: 2px solid #005677; */
-	border-radius: 10px;
-	/* background: white; */
-    margin: 0;
-	padding: 0;
-}
-.close {
-    background: none;
-    color: black;
-    border: 0;
-}
-.gallery {
-    display: grid;
-    grid-row-start: 1;
-    grid-column-start: 1;
-    grid-template-columns: repeat(auto-fill, 100px);
-    grid-template-rows: 1fr;
-    grid-auto-rows: 100px;
-    grid-auto-flow: dense;
-    z-index: 0; 
-	gap: 5px;
-	
-}
-.overlay.open{
-    display: grid;
-}
-
-.item {
-    display: grid;
-    /* grid-template-columns: 1; */
-    /* grid-template-rows: 1; */
-    overflow: hidden;
-	
-    /* max-width: 10px; */
-}
-.item img {
-  grid-column: 1 / -1;
-  grid-row: 1 / -1;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  /* opacity: 0.3; */
-  filter: blur(1px);
-  /* border: 1px solid var(--accent-dark); */
-  border-radius: 10px;
-  box-shadow: 0 0 10px 10px rgba(0, 0, 255, 1);
-}
-.item__overlay {
-    /* background-color: #ece5cb32; */
-    grid-column: 1 / -1;
-    grid-row: 1 / -1;
-    position: relative;
-    display: grid;
-    justify-items: center;
-    align-items: center;
-    transition: 0.2s;
-    transform: translateY(100%);
-}
-
-.item__overlay button {
-    background: none;
-    border: 2px solid white;
-    color: white;
-    text-transform: uppercase;
-    background: rgba(0, 0, 0, 0.1);
-    padding: 5px;
-} 
-.item:hover .item__overlay {
-    transform: translateY(0);
-}
-
-.item.v2 {
-    grid-row: span 2;
-}
-
-.item.v3 {
-    grid-row: span 3;
-}
-
-.item.v4 {
-    grid-row: span 4;
-}
-
-.item.h2 {
-    grid-column: span 2;
-}
-
-.item.h3 {
-    grid-column: span 3;
-}
-
-.item.h4 {
-    grid-column: span 4;
-}
-
-.overlay {
-    position: fixed;
-    background: rgba(0, 0, 0, 0.5);
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    display: none;
-    z-index: 1;
-}
-
-.overlay.open {
-    display: grid;
-    align-self: center;
-    justify-items: center;
-}
-
-.overlay-inner {
-    background: white;
-    width: 700px;
-    padding: 20px;
-}
-
-.overlay img {
-    width: 100%;
-}
-</style>

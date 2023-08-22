@@ -1,6 +1,14 @@
+<script>
+  function makeGallery(count) {
+    var html = "";
+    for (var i = 1; i < count; i++) {
+      html += "<div class='img-holder'>";
+      html += "<img src='./" + i + ".jpg' class='img' alt='" + i + "'>";
+      html += "</div>";
+    }
+    document.getElementById("gallery").innerHTML = html;
+  }
+  makeGallery(21);
+</script>
 
-    <div class="gallery-holder">
-        <section class="gallery">
-            <img src="./1.jpg" alt="1">
-        </section>
-    </div>
+<div class="gallery" id="gallery"></div>
