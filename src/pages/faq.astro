@@ -7,49 +7,56 @@ import Question from "../components/Question.astro";
 <Layout title="FAQ Page">
   <main transition:animate="slide">
     <div class="h1-holder" transition:name="faq-heading">
-      <h1 class="text-gradient">FAQ Page</h1>
+      <h1 class="text-gradient">Got Questions?</h1>
     </div>
-    <div class="sign-container"></div>
+    <!-- <div class="sign-container"> -->
     <img src="./sign.png" alt="sign" class="sign-img" />
-    <ul role="list" class="question-card-grid">
+    <!-- </div> -->
+    <div class="question-card-grid">
       <Question
-        title="What is the sales tax of which you speak"
-        body="See the main website."
+        title="What is the sales tax of which you speak ?"
+        body="Also known as the 'Penny Sales Tax,' the One Cent Sales Tax (OCST) equates to paying one penny per $1 on a taxable item's purchase price. The taxes collected help fund roadway, infrastructure, and greenbelt preservation projects throughout Berkeley County."
+        ;
       />
-      <Question title="Where is my money going" body="See the main website." />
+
       <Question
-        title="Can you fix my privite drive"
-        body="See the main website."
+        title="🔗 Where is my money going?"
+        body=" ☝ Check out this super cool map."
+        href="./project_dashboard"
       />
-      <Question title="Is cereal soup" body="See the main website." />
+
       <Question
-        title="Would you rather wear socks on your ears or have spaghetti for legs"
-        body="See the main website."
+        title="Can you fix my private drive"
+        body="Yep! For sure. We will be right there... you just sit tight m'kay?"
+        href=""
+        ;
       />
+
       <Question
-        title="What is the best way to get rid of a body"
-        body="See the main website."
+        title="Is cereal soup"
+        body="The classification of cereal as soup is a subject of debate and often depends on how one defines soup and its key characteristics. Soup is typically a liquid dish made by combining various ingredients, such as vegetables, meat, or legumes, with broth or water. It's often served hot. Cereal, on the other hand, is a type of food made from grains like wheat, corn, oats, or rice, usually eaten with milk or yogurt. By the traditional definition of soup, cereal wouldn't be considered soup because it doesn't consist of a liquid broth or water base with ingredients cooked together. However, this question often serves as a playful example of how language and categorization can lead to interesting discussions. It's ultimately up to individuals to decide whether they consider cereal to be a type of soup or not based on their own interpretation and perspective."
+        href=""
+        ;
       />
+
+      <Question
+        title="Why is this page so ugly?"
+        body="There is just something about it I freaking hate. I want to punch it in its brain! "
+        href=""
+        ;
+      />
+
       <Question
         title="When you are getting dressed is it sock-sock-shoe-shoe or sock-shoe-sock-shoe"
         body="I think we all know there is really only one right answer to this question."
+        href=""
+        ;
       />
-      <Question title="Why does my Dad hate me" body="See the main website." />
-    </ul>
+    </div>
   </main>
 </Layout>
 
 <style>
-  main {
-    margin: auto;
-    padding: 1rem;
-    width: 800px;
-    max-width: calc(100% - 2rem);
-    color: white;
-    font-size: 20px;
-    line-height: 1.6;
-    margin-top: -15%;
-  }
   .astro-a {
     position: absolute;
     top: -32px;
@@ -119,24 +126,35 @@ import Question from "../components/Question.astro";
     animation: dropBounce 1.5s cubic-bezier(0.68, -0.55, 0.27, 1.55) forwards;
     animation-delay: 1s;
   }
+  .question-card-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-content: space-around;
+    justify-items: center;
+  }
+  .crosshair-cursor {
+    cursor: crosshair;
+  }
   @keyframes dropBounce {
     0% {
       top: -500px;
       opacity: 0;
     }
     60% {
-      top: 40%;
+      top: 10%;
       opacity: 0.5;
       transform: rotate(-5deg);
     }
     80% {
-      top: 42%;
+      top: 19%;
+      left: 15%
       opacity: 1;
       transform: rotate(-10deg);
     }
     100% {
-      top: 45%;
-      transform: rotate(-20deg);
+      top: 27%;
+      left: 21%;
+      transform: rotate(-15deg);
     }
   }
 </style>

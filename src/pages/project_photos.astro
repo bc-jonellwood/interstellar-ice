@@ -1,6 +1,6 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import Card from "../components/Card.astro";
+// import Card from "../components/Card.astro";
 import PhotoGallery from "../components/PhotoGallery.astro";
 ---
 
@@ -34,43 +34,11 @@ import PhotoGallery from "../components/PhotoGallery.astro";
     <div class="h1-holder" transition:name="pics-heading">
       <h1 class="text-gradient">Project Photos</h1>
     </div>
-
-    <!-- <Card 
-		href="#"
-		title="TO DO:"
-		body="I am thinking a cool interactive mosiac type interface that shows all the photos - with a filter for each project? Or someway to interact that makes it enjoyable and more than just a carousel of photos."
-		/> -->
     <PhotoGallery />
   </main>
 </Layout>
 
 <style>
-  main {
-    margin: auto;
-    padding: 1rem;
-    width: 800px;
-    max-width: calc(100% - 2rem);
-    color: white;
-    font-size: 20px;
-    line-height: 1.6;
-    margin-top: -15%;
-  }
-  .astro-a {
-    position: absolute;
-    top: -32px;
-    left: 50%;
-    transform: translatex(-50%);
-    width: 220px;
-    height: auto;
-    z-index: -1;
-  }
-  h1 {
-    font-size: 3rem;
-    font-weight: 700;
-    line-height: 1.25;
-    text-align: center;
-    margin-bottom: 1em;
-  }
   .text-gradient {
     background-image: var(--accent-gradient);
     -webkit-background-clip: text;
