@@ -7,10 +7,11 @@ const { title } = Astro.props;
 import NavItem from "../components/NavItem.astro";
 import Head from "../components/Head.astro";
 import { ViewTransitions } from "astro:transitions";
+import Nav from "../components/Nav";
 ---
 
 <!DOCTYPE html>
-<html lang="en">
+<body lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="description" content="Astro description" />
@@ -23,36 +24,18 @@ import { ViewTransitions } from "astro:transitions";
     <ViewTransitions />
   </head>
   <body>
-    <!-- <Head/> -->
-    <nav class="side-nav">
-      <ul role="list" class="link-card-grid">
-        <NavItem title="Home" href="/#" transition:name="home-heading" />
-        <NavItem
-          title="Frequently Asked Questions"
-          href="./faq"
-          transition:name="faq-heading"
-        />
-        <NavItem
-          title="Interactive Project Dashboard"
-          href="./project_dashboard"
-          transition:name="dash-heading"
-        />
-        <NavItem
-          title="Projects in Photos"
-          href="./project_photos"
-          transition:name="pics-heading"
-        />
-        <NavItem
-          title="Roadway Petition Forms"
-          href="./road_petition"
-          transition:name="pet-heading"
-        />
-        <NavItem title="Contact Us" href="./contact" />
-      </ul>
-    </nav>
-    <div class="container">
-      <slot />
+    <Nav client:load />
+    <div class="max-w-screen-lg mx-20 rounded-xl shadow-md md:max-w-2xl">
+      <div class="md:flex">
+        <div class="md:shrink-0">
+          <!-- <p class="p-8"> -->
+            <slot />
+          <!-- </p> -->
+        </div>
+      </div>
     </div>
+  </body>
+ 
     <style is:global>
       :root {
         --accent: 255, 215, 0;
@@ -66,7 +49,6 @@ import { ViewTransitions } from "astro:transitions";
         );
       }
       html {
-        /* font-family: system-ui, sans-serif; */
         font-family:
           system-ui,
           -apple-system,
@@ -79,14 +61,10 @@ import { ViewTransitions } from "astro:transitions";
           "Open Sans",
           "Helvetica Neue",
           sans-serif;
-        /* background: #13151A; */
         background: rgb(var(--background-gradient));
         background-size: 224px;
       }
       body {
-        margin: 0;
-        margin-top: 20px;
-        padding: 0;
         background-image: radial-gradient(
           farthest-corner circle at 0% 0%,
           #198bbf84 0%,
@@ -102,17 +80,7 @@ import { ViewTransitions } from "astro:transitions";
         background-size: cover;
         background-attachment: fixed;
       }
-      code {
-        font-family:
-          Menlo,
-          Monaco,
-          Lucida Console,
-          Liberation Mono,
-          DejaVu Sans Mono,
-          Bitstream Vera Sans Mono,
-          Courier New,
-          monospace;
-      }
+   
 
       .link-card-grid {
         display: grid;
@@ -124,55 +92,7 @@ import { ViewTransitions } from "astro:transitions";
         grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
         grid-gap: 1rem;
       }
-      nav {
-        display: flex;
-        font-size: larger;
-        width: 15%;
-        background-color: #2e3952;
-        color: white;
-        padding: 20px;
-        box-sizing: border-box;
-        position: fixed;
-        top: 0;
-        height: 100vh;
-        z-index: 1;
-        overflow: auto;
-        scrollbar-gutter: stable;
-      }
-      .container {
-        display: flex;
-        height: calc(100vh - 20%);
-        position: relative;
-        margin-top: 17%;
-      }
-      ul {
-        padding-inline-start: 5px !important;
-      }
-      h1 {
-        font-size: 3rem;
-        font-weight: 700;
-        line-height: 1.25;
-        text-align: center;
-        margin-bottom: 1em;
-      }
-      .h1-holder {
-        padding-top: 0.5rem;
-        padding-bottom: 0.5rem;
-        margin-bottom: 15px;
-        background-color: #00000099;
-        border: 1px solid rgb(var(--accent-light));
-        border-radius: 10px;
-      }
-      main {
-        margin: auto;
-        padding: 1rem;
-        width: 1169px;
-        max-width: calc(100% - 2rem);
-        color: white;
-        font-size: 20px;
-        line-height: 1.6;
-        margin-top: -15%;
-      }
+     
       /* #####################IMg##g@ll3ry############################# */
       .gallery {
         display: grid;
@@ -199,59 +119,5 @@ import { ViewTransitions } from "astro:transitions";
         filter: blur(0);
         box-shadow: 0 0 1px 2px rgba(0, 0, 0, 0.5);
       }
-      .img-holder {
-        border: 5px solid white;
-        border-bottom: 20px solid white;
-        border-radius: 5px;
-        box-shadow:
-          rgba(0, 0, 0, 0.3) 0px 19px 38px,
-          rgba(0, 0, 0, 0.22) 0px 15px 12px;
-      }
-
-      .img--expanded {
-        grid-column: span 2;
-        grid-row: span 2;
-        border-radius: 5px;
-      }
-      .img--expanded img {
-        opacity: 1;
-      }
-
-      .img--expanded .img__img {
-        transform: scale(1.03);
-      }
-
-      @keyframes fadeIn {
-        0% {
-          opacity: 0;
-          transform: scale(0);
-        }
-
-        100% {
-          opacity: 1;
-          transform: scale(1);
-        }
-      }
-
-      .fade-in {
-        opacity: 0;
-        animation: fadeIn 1.9s forwards;
-        animation-delay: 0.9s;
-      }
-
-      .img {
-        /* cursor: pointer; */
-        /* overflow: hidden; */
-        position: relative;
-      }
-
-      .img > * {
-        pointer-events: none;
-      }
-
-      .img__img {
-        transition: transform 1s;
-      }
     </style>
-  </body>
 </html>

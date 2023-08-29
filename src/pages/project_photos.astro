@@ -4,7 +4,7 @@ import Layout from "../layouts/Layout.astro";
 import PhotoGallery from "../components/PhotoGallery.astro";
 ---
 
-<script>
+<!-- <script>
   const gallery = document.querySelector("#gallery");
   gallery.addEventListener("click", (ev) => {
     let target = ev.target as HTMLImageElement;
@@ -27,13 +27,12 @@ import PhotoGallery from "../components/PhotoGallery.astro";
       return;
     }
   });
-</script>
-
+</script> -->
 <Layout title="Project Photos">
   <main transition:animate="slide">
-    <div class="h1-holder" transition:name="pics-heading">
-      <h1 class="text-gradient">Project Photos</h1>
-    </div>
+    <!-- <div class="h1-holder" transition:name="pics-heading">
+    <h1 class="text-gradient">Project Photos</h1>
+  </div> -->
     <PhotoGallery />
   </main>
 </Layout>
