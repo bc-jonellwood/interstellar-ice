@@ -24,7 +24,7 @@ const itemMotionDesktop = {
     hidden: { opacity: 0, x: 0 },
 }
 const navLinks = [
-    // { name: 'Home', href: '/', id: 1 },
+    { name: 'Home', href: '/', id: 1 },
     { name: 'FAQ', href: '/faq', id: 2 },
     { name: 'Projects', href: '/project_dashboard', id: 3 },
     { name: 'Photos', href: '/project_photos', id: 4 },
@@ -55,8 +55,8 @@ const NavLinks = ({
 export default function Nav() {
     const [toggled, setToggled] = useState(false);
     return (
-      <nav className="relative mx-8 mb-2 mt-2 flex items-center justify-between pb-6 font-medium md:mx-16 lg:mx-32">  
-      <svg
+      <nav className="relative mx-20 mb-2 mt-5 flex items-center justify-between pb-6 font-medium md:mx-16 lg:mx-32">  
+      {/* <svg
         className="absolute bottom-0 left-1/2 -translate-x-1/2"
         width="450"
         height="4"
@@ -73,7 +73,7 @@ export default function Nav() {
           strokeWidth="2"
           strokeLinecap="round"
         />
-      </svg>
+      </svg> */}
 
       <motion.div
         animate={{ opacity: 1, x: 0 }}
@@ -81,16 +81,16 @@ export default function Nav() {
         transition={{ delay: 0.35 }}
         className="flex gap-12 w-1/6 items-center justify-center"
       >
-        <img src={BClogo} alt="BGC Logo" />
+        <img src={BClogo} alt="BGC Logo" className="scale-75"/>
         {/* <div className="items-center gap-12 flex w-10">
           <img src={BClogo} alt="Test" />
         </div> */}
       </motion.div>
       {/* Title */}
 
-      <h1 className="text-lg font-bold">
-        <a href="/">Penny Tax</a>
-      </h1>
+      {/* <h1 className="text-lg font-bold">
+        <a href="/">One Cent Sales Tax</a>
+      </h1> */}
 
       {/* Nav Items animating in  */}
       {toggled && (
@@ -100,7 +100,7 @@ export default function Nav() {
           initial="hidden"
           className="fixed left-0 top-0 z-40 flex h-screen w-full flex-col items-center justify-center gap-24 bg-sky-blue text-2xl font-bold">
           <NavLinks
-            className=" flex flex-col gap-24 text-lg"
+            className="flex flex-col gap-24 text-lg"
             isMobile={true}
           />
         </motion.div>
@@ -109,7 +109,7 @@ export default function Nav() {
         animate={{ opacity: 1, x: 0 }}
         initial={{ opacity: 0, x: 25 }}
         transition={{ delay: 0.35 }}
-        className="hidden xl:flex xl:items-center xl:justify-center xl:gap-12 xl:text-lg">
+        className="hidden xl:flex xl:items-center xl:justify-center xl:gap-10 xl:text-lg">
         <NavLinks className="flex gap-12" isMobile={false} />
       </motion.div>
 
@@ -136,7 +136,7 @@ export default function Nav() {
             y: toggled ? -8 : 0,
             width: toggled ? 32 : 24,
           }}
-          className="line-3 block h-0.5 w-4 bg-content bg-accent-dark"
+          className="line-3 block h-0.5 w-8 bg-content bg-accent-dark"
         ></motion.span>
       </motion.div>
     </nav>

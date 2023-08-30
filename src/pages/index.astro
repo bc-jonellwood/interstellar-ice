@@ -6,17 +6,46 @@ import Card from "../components/Card.astro";
 <Layout title="One Cent Sale Tax">
   <main
     transition:animate="slide"
-    class="container flex flex-col justify-center max-w-[50%]"
+    class="container flex flex-col justify-center max-w-[50%] scroll-smooth"
   >
     <div
       class="flex mb-2 mt-0 text-5xl font-medium leading-tight justify-center"
       transition:name="home-heading"
     >
-      <h1 class="text-accent-dark">One Cent Sales Tax Program</h1>
+      <h1 class="text-accent-dark mb-5 lg:text-3xl md:text-xl sm:text-lg">
+        One Cent Sales Tax Program
+      </h1>
     </div>
     <Card href="#" title="TO DO:" body="Video will be added here." />
+    <!-- <div class="flex justify-evenly">
+      <p
+        class="xl:font-bold lg:font-light mlg:font-light md:font-light sm:font-light"
+      >
+        XL
+      </p>
+      <p
+        class="xl:font-light lg:font-bold mlg:font-light md:font-light sm:font-light"
+      >
+        L
+      </p>
+      <p
+        class="xl:font-light lg:font-light mlg:font-bold md:font-light sm:font-light"
+      >
+        MLG
+      </p>
+      <p
+        class="xl:font-light lg:font-light mlg:font-light md:font-bold sm:font-light"
+      >
+        MD
+      </p>
+      <p
+        class="xl:font-light lg:font-light mlg:font-light md:font-light sm:font-bold"
+      >
+        SM
+      </p>
+    </div> -->
     <div
-      class="border-b-2 border-r-2 border-accent py-5 px-5 mb-5 text-xl flex flex-col"
+      class="border-b-2 border-r-2 border-accent py-5 px-5 mb-5 text-xl flex flex-col lg:text-lg md:text-base sm:text-sm"
     >
       <p class="mt-2 pb-3">
         Also known as the "Penny Sales Tax," the One Cent Sales Tax (OCST)
@@ -39,46 +68,72 @@ import Card from "../components/Card.astro";
     </div>
     <div class="flex justify-center">
       <h2
-        class="w-1/2 text-center text-accent-dark text-3xl mb-5 mt-5 pb-5 pt--5 rounded-l bg-gradient-to-t from-accent-faded"
+        class="w-full text-center text-accent-dark text-3xl mb-5 mt-5 pb-5 pt--5 rounded-l bg-gradient-to-t from-accent-faded font-semibold border-b-2 border-r-2 border-accent hover:shadow-lg shadow-accent-faded lg:text-2xl md:text-base sm:text-md"
       >
         Sales Tax Collections
       </h2>
     </div>
-    <div class="flex gap-5 justify-center border-b-2 border-r-2 border-accent">
-      <div class="cube w32">
-        <p class="text-xl text-darker-yellow">2008 Referendum</p>
-        <hr class="py-2 bg-blue-400" />
-        <p class="text-xl font-bold money" id="c-1">143 Million</p>
+    <!-- container for cubes -->
+    <div
+      class="xl:flex xl:flex-row lg:flex lg:flex-row mlg:flex mlg:flex-row gap-5 justify-center border-b-2 border-r-2 border-accent text-center md:flex-col sm:flex-col"
+    >
+      <div
+        class="flex flex-col justify-center items-center w-42 h-48 p-10 m-5 lg:w-26 lg:h-33 lg:p-4 mlg:w-22 mlg:h-28 mlg:p-2 bg-accent-dark rounded-lg shadow-lg"
+      >
+        <p class="text-xl lg:text-lg md:text-md text-darker-yellow">
+          2008 Referendum
+        </p>
+        <hr class="w-full" />
+        <p class="text-xl font-bold money lg:text-lg md:text-md" id="c-1">
+          143 Million
+        </p>
       </div>
-      <div class="cube w32">
-        <p class="text-xl text-darker-yellow">2014 Referendum</p>
-        <hr class="py-2" />
-        <p class="text-xl font-bold money" id="c-2">273 Million</p>
+      <div
+        class="flex flex-col justify-center items-center w-42 h-48 p-10 m-5 lg:w-26 lg:h-33 lg:p-4 mlg:w-22 mlg:h-28 mlg:p-2 bg-accent-dark rounded-lg shadow-lg"
+      >
+        <p class="text-xl text-darker-yellow lg:text-lg md:text-md">
+          2014 Referendum
+        </p>
+        <hr class="w-full" />
+        <p class="text-xl font-bold money lg:text-lg md:text-md" id="c-2">
+          273 Million
+        </p>
       </div>
-      <div class="cube w32">
-        <p class="text-xl text-darker-yellow">2002 Referendum</p>
-        <hr class="bg-yellow py-2" />
-        <p class="text-xl font-bold money" id="c-3">587 Million</p>
+      <div
+        class="flex flex-col justify-center items-center w-42 h-48 p-10 m-5 lg:w-26 lg:h-33 lg:p-4 mlg:w-22 mlg:h-28 mlg:p-2 bg-accent-dark rounded-lg shadow-lg"
+      >
+        <p class="text-xl text-darker-yellow lg:text-lg md:text-md">
+          2022 Referendum
+        </p>
+        <hr class="w-full" />
+        <p class="text-xl font-bold money lg:text-lg md:text-md" id="c-3">
+          587 Million
+        </p>
       </div>
     </div>
 
-    <div class="flex justify-center my-5 w-1/2">
+    <div class="flex justify-center my-5 w-full">
       <h2
-        class="w-1/2 text-center text-accent-dark text-3xl mb-5 mt-5 pb-5 pt--5 rounded-l bg-gradient-to-t from-accent-faded border-b-2 border-r-2 border-accent"
+        class="w-full text-center text-accent-dark text-3xl mb-5 mt-5 pb-5 pt--5 rounded-l bg-gradient-to-t from-accent-faded border-b-2 border-r-2 border-accent font-semibold hover:shadow-lg shadow-accent-faded lg:text-2xl md:text-base sm:text-md"
       >
         Road Projects
       </h2>
     </div>
+    <!-- <div
+      class="flex gap-5 border-b-2 border-r-2 border-accent pb-5 w-full pl-20 text-xl"
+    > -->
     <div
-      class="flex gap-5 border-b-2 border-r-2 border-accent pb-5 w-1/2 pl-20"
+      class="xl:grid xl:grid-cols-2 xl:gap-5 lg:grid lg:grid-cols-2 lg:gap-4 mlg:grid mlg:grid-cols-1 mlg:gap-3 border-b-2 border-r-2 border-accent pb-5 pr-5 w-full xl:text-xl lg:text-lg mlg:text-lg md:text-md sm:text-sm"
     >
-      <ul class="list-outside w-1/2">
+      <ul class="list-outside list-disc w-full">
         <li class="leading-loose">Capacity (Widening) Projects</li>
         <li class="leading-loose">Major Resurfacing Projects</li>
         <li class="leading-loose">
           Local Street Resurfacing (Streets to be determined through input from
           SCDOT, County and Municipal officials, as well as the public)
         </li>
+      </ul>
+      <ul class="list-outside list-disc w-full">
         <li class="leading-loose">Intersection Improvements</li>
         <li class="leading-loose">Other Transportation Projects</li>
         <li class="leading-loose">
@@ -88,17 +143,17 @@ import Card from "../components/Card.astro";
       </ul>
     </div>
 
-    <div class="flex justify-center my-5 w-1/2">
+    <div class="flex justify-center my-5 w-full">
       <h2
-        class="text-center text-accent-dark text-3xl mb-5 mt-5 pb-5 pt--5 rounded-l bg-gradient-to-t from-accent-faded border-b-2 border-r-2 border-accent w-1/2"
+        class="text-center text-accent-dark text-3xl mb-5 mt-5 pb-5 pt--5 rounded-l bg-gradient-to-t from-accent-faded border-b-2 border-r-2 border-accent w-full font-semibold hover:shadow-lg shadow-accent-faded lg:text-2xl md:text-base sm:text-md"
       >
         Greenbelt Preservation Projects
       </h2>
     </div>
     <div
-      class="flex gap-5 border-b-2 border-r-2 border-accent pb-5 w-1/2 pl-20"
+      class="xl:grid xl:grid-cols-2 xl:gap-5 lg:grid lg:grid-cols-2 lg:gap-4 mlg:grid mlg:grid-cols-1 mlg:gap-3"
     >
-      <ul class="list-outside">
+      <ul class="list-outside list-disc w-full">
         <li class="leading-loose">Purchasing property for conservation</li>
         <li class="leading-loose">Purchasing conservation easements</li>
         <li class="leading-loose">Creating passive greenspace</li>
@@ -112,15 +167,18 @@ import Card from "../components/Card.astro";
     </div>
 
     <div
-      class="flex gap-5 justify-center border-b-2 border-r-2 border-accent pb-5 mt-10 w-1/2"
+      class="flex gap-5 justify-center border-b-2 border-r-2 border-accent pb-5 mt-10 w-full"
       id="text-div-1"
     >
-      <div class="grid p-10 mx-10" id="quote-div">
+      <div
+        class="grid xl:p-6 xl:mx-6 lg:p-4 lg:mx-4 mlg:p-1 mlg:mx-1"
+        id="quote-div"
+      >
         <blockquote
-          class="text-xl italic font-semibold text-gray-900 dark:text-white"
+          class="xl:text-xl lg:text-lg lg:p-8 lg:mx-8 mlg:text-md mlg:p-1 mlg:mx-1 md:text-md sm:text-md italic font-semibold text-gray-900 dark:text-white"
         >
           <p
-            class="text-xl italic font-medium leading-relaxed text-gray-900 dark:text-white mb-5"
+            class="italic font-medium leading-relaxed text-gray-900 dark:text-white mb-5"
           >
             "Each project completed not only adds to the quality of life to
             those directly affected, but also reduces annual maintenance costs
@@ -129,7 +187,11 @@ import Card from "../components/Card.astro";
             infrastructure improvements to our County."
           </p>
         </blockquote>
-        <p class="cite-holder">- Johnny Cribb, Berkeley County Supervisor</p>
+        <p
+          class="text-right bg-gradient-to-r from-transparent to-accent-dark text-white text-brand-yellow p-5 border-b-2 border-r-2 border-accent"
+        >
+          - Johnny Cribb, Berkeley County Supervisor
+        </p>
       </div>
     </div>
   </main>
@@ -161,6 +223,7 @@ import Card from "../components/Card.astro";
   incrementCounter("c-2", 0, 237, 2000, " Million", "$");
   incrementCounter("c-3", 0, 587, 500, " Million", "$");
 </script>
+
 <style>
   #text-div-1 {
     overflow: hidden;
@@ -195,24 +258,24 @@ import Card from "../components/Card.astro";
   }
 
   .cube {
-    display: flex;
-    flex-direction: column;
-    width: 200px;
-    height: 200px;
-    border-radius: 30px; /* Adjust this value for more or less rounded corners */
-    background-color: #005677;
-    padding: 10px;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 1rem;
-    box-shadow:
+    /* display: flex; */
+    /* flex-direction: column; */
+    /* width: 200px; */
+    /* height: 200px; */
+    /* border-radius: 30px; Adjust this value for more or less rounded corners */
+    /* background-color: #005677; */
+    /* padding: 10px; */
+    /* align-items: center; */
+    /* justify-content: center; */
+    /* margin-bottom: 1rem; */
+    /* box-shadow:
       2.8px 2.8px 2.2px rgba(0, 0, 0, 0.02),
       6.7px 6.7px 5.3px rgba(0, 0, 0, 0.028),
       12.5px 12.5px 10px rgba(0, 0, 0, 0.035),
       22.3px 22.3px 17.9px rgba(0, 0, 0, 0.042),
       41.8px 41.8px 33.4px rgba(0, 0, 0, 0.05),
       100px 100px 80px rgba(0, 0, 0, 0.07),
-      inset 0px 0px 30px 5px rgba(73, 72, 84, 0.9);
+      inset 0px 0px 30px 5px rgba(73, 72, 84, 0.9); */
   }
   /* .cube hr {
       width: 90%;
@@ -242,5 +305,3 @@ import Card from "../components/Card.astro";
     padding-right: 1rem;
   }
 </style>
- -->
-

@@ -5,6 +5,7 @@ module.exports = {
 		screens: {
 			sm: '480px',
       		md: '768px',
+			mlg: '872px',
       		lg: '976px',
       		xl: '1440px',
 		},
@@ -19,6 +20,7 @@ module.exports = {
 			'transparent': 'transparent',
 			'almost-transparent': '0000ff',
 			'sky-blue': '#03a9f4',
+			'brand-yellow': '#d5ca9e',
 		},
 		container:{
 			center: true,
