@@ -55,10 +55,10 @@ const NavLinks = ({
 export default function Nav() {
     const [toggled, setToggled] = useState(false);
     return (
-      <nav className="relative mx-8 mb-2 mt-2 flex items-center justify-between pb-6 font-medium md:mx-16 lg:mx-32">
-      {/* <svg
+      <nav className="relative mx-8 mb-2 mt-2 flex items-center justify-between pb-6 font-medium md:mx-16 lg:mx-32">  
+      <svg
         className="absolute bottom-0 left-1/2 -translate-x-1/2"
-        width="250"
+        width="450"
         height="4"
         viewBox="0 0 250 4"
         fill="none"
@@ -73,7 +73,7 @@ export default function Nav() {
           strokeWidth="2"
           strokeLinecap="round"
         />
-      </svg> */}
+      </svg>
 
       <motion.div
         animate={{ opacity: 1, x: 0 }}
