@@ -6,7 +6,7 @@ import Card from "../components/Card.astro";
 <Layout title="One Cent Sale Tax">
   <main
     transition:animate="slide"
-    class="flex flex-col justify-center max-w-[50%]"
+    class="container flex flex-col justify-center max-w-[50%]"
   >
     <div
       class="flex mb-2 mt-0 text-5xl font-medium leading-tight justify-center"
@@ -61,101 +61,81 @@ import Card from "../components/Card.astro";
         <p class="text-xl font-bold money" id="c-3">587 Million</p>
       </div>
     </div>
-  </main>
 
-  <div class="flex justify-center my-5 w-1/2">
-    <h2
-      class="w-1/2 text-center text-accent-dark text-3xl mb-5 mt-5 pb-5 pt--5 rounded-l bg-gradient-to-t from-accent-faded border-b-2 border-r-2 border-accent"
-    >
-      Road Projects
-    </h2>
-  </div>
-  <div class="flex gap-5 border-b-2 border-r-2 border-accent pb-5 w-1/2 pl-20">
-    <ul class="list-outside w-1/2">
-      <li class="leading-loose">Capacity (Widening) Projects</li>
-      <li class="leading-loose">Major Resurfacing Projects</li>
-      <li class="leading-loose">
-        Local Street Resurfacing (Streets to be determined through input from
-        SCDOT, County and Municipal officials, as well as the public)
-      </li>
-      <li class="leading-loose">Intersection Improvements</li>
-      <li class="leading-loose">Other Transportation Projects</li>
-      <li class="leading-loose">
-        Paving Projects (Various dirt roads throughout the County as determined
-        by the County governing body and staff)
-      </li>
-    </ul>
-  </div>
-
-  <div class="flex justify-center my-5 w-1/2">
-    <h2
-      class="text-center text-accent-dark text-3xl mb-5 mt-5 pb-5 pt--5 rounded-l bg-gradient-to-t from-accent-faded border-b-2 border-r-2 border-accent w-1/2"
-    >
-      Greenbelt Preservation Projects
-    </h2>
-  </div>
-  <div class="flex gap-5 border-b-2 border-r-2 border-accent pb-5 w-1/2 pl-20">
-    <ul class="list-outside">
-      <li class="leading-loose">Purchasing property for conservation</li>
-      <li class="leading-loose">Purchasing conservation easements</li>
-      <li class="leading-loose">Creating passive greenspace</li>
-      <li class="leading-loose">Creating active greenspace</li>
-      <li class="leading-loose">Protecting natural resources</li>
-      <li class="leading-loose">
-        Protecting agricultural or heritage landscapes
-      </li>
-      <li class="leading-loose">Protecting scenic corridors</li>
-    </ul>
-  </div>
-
-  <div
-    class="flex gap-5 justify-center border-b-2 border-r-2 border-accent pb-5 mt-10 w-1/2"
-    id="text-div-1"
-  >
-    <div class="grid p-10 mx-10" id="quote-div">
-      <blockquote
-        class="text-xl italic font-semibold text-gray-900 dark:text-white"
+    <div class="flex justify-center my-5 w-1/2">
+      <h2
+        class="w-1/2 text-center text-accent-dark text-3xl mb-5 mt-5 pb-5 pt--5 rounded-l bg-gradient-to-t from-accent-faded border-b-2 border-r-2 border-accent"
       >
-        <p
-          class="text-xl italic font-medium leading-relaxed text-gray-900 dark:text-white mb-5"
-        >
-          "Each project completed not only adds to the quality of life to those
-          directly affected, but also reduces annual maintenance costs and
-          allows resources to be used elsewhere. Thanks to the TAXPAYER for
-          supporting this program so we can help bring critical infrastructure
-          improvements to our County."
-        </p>
-      </blockquote>
-      <p class="cite-holder">- Johnny Cribb, Berkeley County Supervisor</p>
+        Road Projects
+      </h2>
     </div>
-  </div>
+    <div
+      class="flex gap-5 border-b-2 border-r-2 border-accent pb-5 w-1/2 pl-20"
+    >
+      <ul class="list-outside w-1/2">
+        <li class="leading-loose">Capacity (Widening) Projects</li>
+        <li class="leading-loose">Major Resurfacing Projects</li>
+        <li class="leading-loose">
+          Local Street Resurfacing (Streets to be determined through input from
+          SCDOT, County and Municipal officials, as well as the public)
+        </li>
+        <li class="leading-loose">Intersection Improvements</li>
+        <li class="leading-loose">Other Transportation Projects</li>
+        <li class="leading-loose">
+          Paving Projects (Various dirt roads throughout the County as
+          determined by the County governing body and staff)
+        </li>
+      </ul>
+    </div>
+
+    <div class="flex justify-center my-5 w-1/2">
+      <h2
+        class="text-center text-accent-dark text-3xl mb-5 mt-5 pb-5 pt--5 rounded-l bg-gradient-to-t from-accent-faded border-b-2 border-r-2 border-accent w-1/2"
+      >
+        Greenbelt Preservation Projects
+      </h2>
+    </div>
+    <div
+      class="flex gap-5 border-b-2 border-r-2 border-accent pb-5 w-1/2 pl-20"
+    >
+      <ul class="list-outside">
+        <li class="leading-loose">Purchasing property for conservation</li>
+        <li class="leading-loose">Purchasing conservation easements</li>
+        <li class="leading-loose">Creating passive greenspace</li>
+        <li class="leading-loose">Creating active greenspace</li>
+        <li class="leading-loose">Protecting natural resources</li>
+        <li class="leading-loose">
+          Protecting agricultural or heritage landscapes
+        </li>
+        <li class="leading-loose">Protecting scenic corridors</li>
+      </ul>
+    </div>
+
+    <div
+      class="flex gap-5 justify-center border-b-2 border-r-2 border-accent pb-5 mt-10 w-1/2"
+      id="text-div-1"
+    >
+      <div class="grid p-10 mx-10" id="quote-div">
+        <blockquote
+          class="text-xl italic font-semibold text-gray-900 dark:text-white"
+        >
+          <p
+            class="text-xl italic font-medium leading-relaxed text-gray-900 dark:text-white mb-5"
+          >
+            "Each project completed not only adds to the quality of life to
+            those directly affected, but also reduces annual maintenance costs
+            and allows resources to be used elsewhere. Thanks to the TAXPAYER
+            for supporting this program so we can help bring critical
+            infrastructure improvements to our County."
+          </p>
+        </blockquote>
+        <p class="cite-holder">- Johnny Cribb, Berkeley County Supervisor</p>
+      </div>
+    </div>
+  </main>
 </Layout>
 
 <script>
-  // Callback function for the Intersection Observer
-  const handleIntersection = (entries, observer) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        console.log("We got an intersection!");
-        entry.target.classList.add("slide-in");
-        console.log("slide-in added");
-        observer.unobserve(entry.target);
-      }
-    });
-  };
-
-  // Create an Intersection Observer
-  const observer = new IntersectionObserver(handleIntersection, {
-    root: null,
-    threshold: 0.5,
-  });
-
-  // Start observing the quote-div element
-  const quoteDiv = document.getElementById("quote-div");
-  console.log(quoteDiv);
-  observer.observe(quoteDiv);
-  console.log("observer started");
-
   function incrementCounter(
     selector: string,
     current: number,

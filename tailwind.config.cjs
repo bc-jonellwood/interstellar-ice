@@ -18,6 +18,7 @@ module.exports = {
 			'dark-green': '#286142',
 			'transparent': 'transparent',
 			'almost-transparent': '0000ff',
+			'sky-blue': '#03a9f4',
 		},
 		container:{
 			center: true,
