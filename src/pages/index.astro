@@ -1,6 +1,7 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Card from "../components/Card.astro";
+import H2Element from "../components/H2Element.astro";
 ---
 
 <Layout title="One Cent Sale Tax">
@@ -66,13 +67,7 @@ import Card from "../components/Card.astro";
         2014 referendums.
       </p>
     </div>
-    <div class="flex justify-center">
-      <h2
-        class="w-full text-center text-accent-dark text-3xl mb-5 mt-5 pb-5 pt--5 rounded-l bg-gradient-to-t from-accent-faded font-semibold border-b-2 border-r-2 border-accent hover:shadow-lg shadow-accent-faded lg:text-2xl md:text-base sm:text-md"
-      >
-        Sales Tax Collections
-      </h2>
-    </div>
+    <H2Element text="Sales Tax Collections" />
     <!-- container for cubes -->
     <div
       class="xl:flex xl:flex-row lg:flex lg:flex-row mlg:flex mlg:flex-row gap-5 justify-center border-b-2 border-r-2 border-accent text-center md:flex-col sm:flex-col"
@@ -111,17 +106,7 @@ import Card from "../components/Card.astro";
         </p>
       </div>
     </div>
-
-    <div class="flex justify-center my-5 w-full">
-      <h2
-        class="w-full text-center text-accent-dark text-3xl mb-5 mt-5 pb-5 pt--5 rounded-l bg-gradient-to-t from-accent-faded border-b-2 border-r-2 border-accent font-semibold hover:shadow-lg shadow-accent-faded lg:text-2xl md:text-base sm:text-md"
-      >
-        Road Projects
-      </h2>
-    </div>
-    <!-- <div
-      class="flex gap-5 border-b-2 border-r-2 border-accent pb-5 w-full pl-20 text-xl"
-    > -->
+    <H2Element text="Road Projects" />
     <div
       class="xl:grid xl:grid-cols-2 xl:gap-5 lg:grid lg:grid-cols-2 lg:gap-4 mlg:grid mlg:grid-cols-1 mlg:gap-3 border-b-2 border-r-2 border-accent pb-5 pr-5 w-full xl:text-xl lg:text-lg mlg:text-lg md:text-md sm:text-sm"
     >
@@ -143,21 +128,17 @@ import Card from "../components/Card.astro";
       </ul>
     </div>
 
-    <div class="flex justify-center my-5 w-full">
-      <h2
-        class="text-center text-accent-dark text-3xl mb-5 mt-5 pb-5 pt--5 rounded-l bg-gradient-to-t from-accent-faded border-b-2 border-r-2 border-accent w-full font-semibold hover:shadow-lg shadow-accent-faded lg:text-2xl md:text-base sm:text-md"
-      >
-        Greenbelt Preservation Projects
-      </h2>
-    </div>
+    <H2Element text="Greenbelt Preservation Projects" />
     <div
-      class="xl:grid xl:grid-cols-2 xl:gap-5 lg:grid lg:grid-cols-2 lg:gap-4 mlg:grid mlg:grid-cols-1 mlg:gap-3"
+      class="xl:grid xl:grid-cols-2 xl:gap-5 lg:grid lg:grid-cols-2 lg:gap-4 mlg:grid mlg:grid-cols-1 mlg:gap-3 border-b-2 border-r-2 border-accent pb-5 pr-5 w-full xl:text-xl lg:text-lg mlg:text-lg md:text-md sm:text-sm"
     >
       <ul class="list-outside list-disc w-full">
         <li class="leading-loose">Purchasing property for conservation</li>
         <li class="leading-loose">Purchasing conservation easements</li>
         <li class="leading-loose">Creating passive greenspace</li>
         <li class="leading-loose">Creating active greenspace</li>
+      </ul>
+      <ul class="list-outside list-disc w-full">
         <li class="leading-loose">Protecting natural resources</li>
         <li class="leading-loose">
           Protecting agricultural or heritage landscapes

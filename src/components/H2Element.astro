@@ -1,0 +1,14 @@
+---
+interface Props {
+  text: string;
+}
+const { text } = Astro.props;
+---
+
+<div class="flex justify-center my-5">
+  <h2
+    class="w-full text-center text-accent-dark text-3xl mb-5 mt-5 pb-5 pt--5 rounded-l bg-gradient-to-t from-accent-faded font-semibold border-b-2 border-r-2 border-accent hover:shadow-lg shadow-accent-faded lg:text-2xl md:text-base sm:text-md"
+  >
+    {text}
+  </h2>
+</div>

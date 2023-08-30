@@ -9,6 +9,7 @@ import Head from "../components/Head.astro";
 import { ViewTransitions } from "astro:transitions";
 import Nav from "../components/Nav";
 import Footer from "../components/Footer.astro";
+import Main from "../components/Main.astro";
 ---
 
 <!DOCTYPE html>
@@ -30,9 +31,9 @@ import Footer from "../components/Footer.astro";
     <div class="max-w-3/4 rounded-xl shadow-md">
       <div>
         <div class="md:shrink-0">
-          <!-- <p class="p-8"> -->
+          <!-- <Main> -->
           <slot />
-          <!-- </p> -->
+          <!-- </Main> -->
         </div>
       </div>
     </div>
@@ -68,24 +69,25 @@ import Footer from "../components/Footer.astro";
         "Open Sans",
         "Helvetica Neue",
         sans-serif;
-      background: rgb(var(--background-gradient));
-      background-size: 224px;
+      /* background: rgb(var(--background-gradient)); */
+      /* background-size: 224px; */
     }
     body {
       background-image: radial-gradient(
         farthest-corner circle at 0% 0%,
-        #198bbf84 0%,
+        #03a9f4 0%,
         26%,
-        #198bbf88 0% 0%,
+        #03a9f499 0% 0%,
         47%,
-        #198bbf92 0% 0%,
+        #03a9f490 0% 0%,
         69%,
-        #198bbf98 0% 0%,
+        #03a9f498 0% 0%,
         89%,
         #005475 100%
       );
       background-size: cover;
       background-attachment: fixed;
+      /* background-color: #03a9f4; */
     }
 
     .link-card-grid {
