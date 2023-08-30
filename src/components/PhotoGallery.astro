@@ -1,4 +1,5 @@
 ---
+import ProjectImage from "./ProjectImage.astro";
 import img1 from "/1.jpg";
 import img2 from "/2.jpg";
 import img3 from "/3.jpg";
@@ -22,52 +23,27 @@ import img20 from "/20.jpg";
 ---
 
 <div class="mx-12" id="gallery">
-  <h1 class="my-24 text-center text-xl>">Projects in Photos</h1>
   <div class="grid grid-cols-1 gap-24 xl:mx-48 xl:grid-cols-2">
-    <div class="group relative cursor-pointer">
-      <img
-        class="relative z-10 w-full rounded-lg transition-all group-hover:-translate-x-3 w-1/5"
-        src={img1}
-        alt="roadwork"
-      />
-      <div
-        class="absolute left-0 top-0 h-full w-full rounded-lg bg-black transition-all group-hover:translate-x-4 group-hover:translate-y-4"
-      >
-      </div>
-    </div>
-    <!-- start new image div -->
-    <div class="group relative cursor-pointer">
-      <img
-        class="relative z-10 w-full rounded-lg transition-all group-hover:-translate-x-3"
-        src={img2}
-        alt="roadwork"
-      />
-      <div
-        class="absolute left-0 top-0 h-full w-full rounded-lg bg-black transition-all group-hover:translate-x-4 group-hover:translate-y-4"
-      >
-      </div>
-    </div>
-    <div class="group relative cursor-pointer">
-      <img
-        class="relative z-10 w-full rounded-lg transition-all group-hover:-translate-x-3"
-        src={img3}
-        alt="roadwork"
-      />
-      <div
-        class="absolute left-0 top-0 h-full w-full rounded-lg bg-black transition-all group-hover:translate-x-4 group-hover:translate-y-4"
-      >
-      </div>
-    </div>
-    <div class="group relative cursor-pointer">
-      <img
-        class="relative z-10 w-full rounded-lg transition-all group-hover:-translate-x-3"
-        src={img4}
-        alt="roadwork"
-      />
-      <div
-        class="absolute left-0 top-0 h-full w-full rounded-lg bg-black transition-all group-hover:translate-x-4 group-hover:translate-y-4"
-      >
-      </div>
-    </div>
+    <ProjectImage src={img1} alt="roadwork" />
+    <ProjectImage src={img2} alt="roadwork" />
+    <ProjectImage src={img3} alt="roadwork" />
+    <ProjectImage src={img4} alt="roadwork" />
+    <ProjectImage src={img4} alt="roadwork" />
+    <ProjectImage src={img5} alt="roadwork" />
+    <ProjectImage src={img6} alt="roadwork" />
+    <ProjectImage src={img7} alt="roadwork" />
+    <ProjectImage src={img8} alt="roadwork" />
+    <ProjectImage src={img9} alt="roadwork" />
+    <ProjectImage src={img10} alt="roadwork" />
+    <ProjectImage src={img11} alt="roadwork" />
+    <ProjectImage src={img12} alt="roadwork" />
+    <ProjectImage src={img13} alt="roadwork" />
+    <ProjectImage src={img14} alt="roadwork" />
+    <ProjectImage src={img15} alt="roadwork" />
+    <ProjectImage src={img16} alt="roadwork" />
+    <ProjectImage src={img17} alt="roadwork" />
+    <ProjectImage src={img18} alt="roadwork" />
+    <ProjectImage src={img19} alt="roadwork" />
+    <ProjectImage src={img20} alt="roadwork" />
   </div>
 </div>

@@ -1,0 +1,19 @@
+---
+interface Props {
+  src: string;
+  alt: string;
+}
+const { src, alt } = Astro.props;
+---
+
+<div class="group relative cursor-pointer">
+  <img
+    class="relative z-10 w-full rounded-lg transition-all group-hover:-translate-x-3"
+    src={src}
+    alt={alt}
+  />
+  <div
+    class="absolute left-0 top-0 h-full w-full rounded-lg bg-black transition-all group-hover:translate-x-4 group-hover:translate-y-4"
+  >
+  </div>
+</div>
