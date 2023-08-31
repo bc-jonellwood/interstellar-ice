@@ -10,6 +10,8 @@ import { ViewTransitions } from "astro:transitions";
 import Nav from "../components/Nav";
 import Footer from "../components/Footer.astro";
 import Main from "../components/Main.astro";
+import Breadcrumb from "../components/Breadcrumb.astro";
+import SideNav from "../components/SideNav.astro";
 ---
 
 <!DOCTYPE html>
@@ -25,10 +27,13 @@ import Main from "../components/Main.astro";
     <ViewTransitions />
   </head>
   <body>
-    <div class="container max-w-screen-xl mx-20">
+    <div class="container w-full">
+      <!-- <SideNav /> -->
       <Nav client:load />
     </div>
-    <div class="max-w-3/4 rounded-xl shadow-md">
+    <!-- <Breadcrumb /> -->
+    <!-- <div class="container max-w-screen-xl mx-20"></div> -->
+    <div class="max-w-3/4 rounded-xl md:mx-5 lg:mx-7 xl:mx-11">
       <div>
         <div class="md:shrink-0">
           <!-- <Main> -->

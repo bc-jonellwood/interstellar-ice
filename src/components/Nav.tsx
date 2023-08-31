@@ -2,6 +2,7 @@ import BClogo from '/BCLogoBlue.png';
 import { motion } from 'framer-motion';
 import { useState } from 'react';
 
+
 const navMotion = {
     visible: {
         opacity: 1,
@@ -55,7 +56,7 @@ const NavLinks = ({
 export default function Nav() {
     const [toggled, setToggled] = useState(false);
     return (
-      <nav className="relative mx-20 mb-2 mt-5 flex items-center justify-between pb-6 font-medium md:mx-16 lg:mx-32">  
+      <nav className="relative mx:2 mb-2 mt-5 flex items-center justify-between pb-6 font-medium md:mx-16 lg:mx-32">  
       {/* <svg
         className="absolute bottom-0 left-1/2 -translate-x-1/2"
         width="450"
@@ -81,7 +82,7 @@ export default function Nav() {
         transition={{ delay: 0.35 }}
         className="flex gap-12 w-1/6 items-center justify-center"
       >
-        <img src={BClogo} alt="BGC Logo" className="scale-75"/>
+        <img src={BClogo} alt="BGC Logo" className="scale-75 xl:block lg:block mlg:block md:hidden sm:hidden xsm:hidden"/>
         {/* <div className="items-center gap-12 flex w-10">
           <img src={BClogo} alt="Test" />
         </div> */}
@@ -98,7 +99,7 @@ export default function Nav() {
           variants={navMotion}
           animate="visible"
           initial="hidden"
-          className="fixed left-0 top-0 z-40 flex h-screen w-full flex-col items-center justify-center gap-24 bg-sky-blue text-2xl font-bold">
+          className="fixed left-0 top-0 z-40 flex h-screen w-full flex-col items-center justify-center gap-24 bg-sky-blue text-2xl font-bold overflow-hidden">
           <NavLinks
             className="flex flex-col gap-24 text-lg"
             isMobile={true}
