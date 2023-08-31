@@ -83,6 +83,7 @@ export default function Nav() {
         className="flex gap-12 w-1/6 items-center justify-center"
       >
         <img src={BClogo} alt="BGC Logo" className="scale-75 xl:block lg:block mlg:block md:hidden sm:hidden xsm:hidden"/>
+        
         {/* <div className="items-center gap-12 flex w-10">
           <img src={BClogo} alt="Test" />
         </div> */}

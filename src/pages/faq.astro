@@ -1,28 +1,25 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import H2Element from "../components/H2Element.astro";
 ---
 
 <Layout title="FAQ Page">
   <main
     transition:animate="slide"
-    class="container flex flex-col justify-center max-w-[50%] scroll-smooth mb-10 h-full sm:max-w-full sm:ml-1 xsm:max-w-full xsm:ml-1"
+    class="container flex flex-col justify-center w-full ml-1 scroll-smooth"
   >
-    <div
-      class="flex mb-2 mt-0 text-5xl font-medium leading-tight justify-center"
-      transition:name="faq-heading"
-    >
-      <h1 class="text-accent-dark mb-5 lg:text-3xl md:text-xl sm:text-lg">
-        Got Questions?
-      </h1>
-    </div>
+  
+    
+  </div>
+  <H2Element text="Got Questions?" />
 
     <!-- <img src="./sign.png" alt="sign" class="sign-img" /> -->
 
     <div id="accordion-collapse" data-accordion="collapse">
-      <h2 id="accordion-collapse-heading-1">
+      <h2 id="accordion-collapse-heading-1" class="dark:bg-gray-500 rounded-md">
         <button
           type="button"
-          class="flex items-center justify-between w-full p-5 font-medium text-left text-gray-500 border border-b-0 border-gray-200 rounded-t-xl focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-800 dark:border-gray-700 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800"
+          class="flex items-center justify-between w-full p-5 font-medium text-left text-gray-500 border border-b-0 border-gray-200 rounded-t-xl focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-800 dark:border-gray-700 dark:text-gray-100 hover:bg-gray-100 dark:hover:bg-gray-800"
           data-accordion-target="#accordion-collapse-body-1"
           aria-expanded="true"
           aria-controls="accordion-collapse-body-1"
@@ -69,10 +66,10 @@ import Layout from "../layouts/Layout.astro";
         </div>
       </div>
       <!-- Start Item 2 -->
-      <h2 id="accordion-collapse-heading-2">
+      <h2 id="accordion-collapse-heading-2" class="dark:bg-gray-500 rounded-md">
         <button
           type="button"
-          class="flex items-center justify-between w-full p-5 font-medium text-left text-gray-500 border border-b-0 border-gray-200 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-800 dark:border-gray-700 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800"
+          class="flex items-center justify-between w-full p-5 font-medium text-left text-gray-500 border border-b-0 border-gray-200 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-800 dark:border-gray-700 dark:text-gray-100 hover:bg-gray-100 dark:hover:bg-gray-800"
           data-accordion-target="#accordion-collapse-body-2"
           aria-expanded="false"
           aria-controls="accordion-collapse-body-2"
@@ -113,10 +110,10 @@ import Layout from "../layouts/Layout.astro";
         </div>
       </div>
       <!-- Start Item 3 -->
-      <h2 id="accordion-collapse-heading-3">
+      <h2 id="accordion-collapse-heading-3" class="dark:bg-gray-500 rounded-md">
         <button
           type="button"
-          class="flex items-center justify-between w-full p-5 font-medium text-left text-gray-500 border border-gray-200 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-800 dark:border-gray-700 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800"
+          class="flex items-center justify-between w-full p-5 font-medium text-left text-gray-500 border border-gray-200 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-800 dark:border-gray-700 dark:text-gray-100 hover:bg-gray-100 dark:hover:bg-gray-800"
           data-accordion-target="#accordion-collapse-body-3"
           aria-expanded="false"
           aria-controls="accordion-collapse-body-3"
@@ -151,10 +148,10 @@ import Layout from "../layouts/Layout.astro";
         </div>
       </div>
       <!-- Start Item 4 -->
-      <h2 id="accordion-collapse-heading-4">
+      <h2 id="accordion-collapse-heading-4" class="dark:bg-gray-500 rounded-md">
         <button
           type="button"
-          class="flex items-center justify-between w-full p-5 font-medium text-left text-gray-500 border border-gray-200 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-800 dark:border-gray-700 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800"
+          class="flex items-center justify-between w-full p-5 font-medium text-left text-gray-500 border border-gray-200 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-800 dark:border-gray-700 dark:text-gray-100 hover:bg-gray-100 dark:hover:bg-gray-800"
           data-accordion-target="#accordion-collapse-body-4"
           aria-expanded="false"
           aria-controls="accordion-collapse-body-4"

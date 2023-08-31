@@ -13,7 +13,6 @@ module.exports = {
       lg: "976px",
       xl: "1440px",
     },
-
     colors: {
       accent: "#ffd700",
       "accent-faded": "#ffd70050",
@@ -26,13 +25,23 @@ module.exports = {
       "almost-transparent": "0000ff",
       "sky-blue": "#03a9f4",
       "brand-yellow": "#d5ca9e",
+      "bg-blue-1": "#03a9f4",
+      "bg-blue-2": "#03a9f499",
+      "bg-blue-3": "#03a9f490",
+      "bg-blue-4": "#03a9f498",
+      "bg-blue-5": "#005475",
+      "white-text": "#fbfbfb",
     },
     container: {
       center: true,
     },
+    darkMode: "class",
     extend: {
       listStyleImage: {
         checkmark: "url('/checkmark.png')",
+      },
+      backgroundImage: {
+        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
       },
       primary: {
         50: "#eff6ff",

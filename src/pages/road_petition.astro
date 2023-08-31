@@ -1,22 +1,15 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Card from "../components/Card.astro";
+import H2Element from "../components/H2Element.astro";
 ---
 
 <Layout title="Road Petions Forms">
   <main
     transition:animate="slide"
-    class="container flex flex-col justify-center max-w-[50%] scroll-smooth mb-10"
+    class="container flex flex-col justify-center w-full ml-1 scroll-smooth"
   >
-    <div
-      class="flex mb-2 mt-0 text-5xl font-medium leading-tight justify-center"
-      transition:name="pet-heading"
-    >
-      <h1 class="text-accent-dark mb-5 lg:text-3xl md:text-xl sm:text-lg">
-        Road Petition Forms
-      </h1>
-    </div>
-
+    <H2Element text="Road Petitions Forms" />
     <Card
       href="#"
       title="TO DO:"

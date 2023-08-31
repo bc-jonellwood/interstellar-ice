@@ -5,33 +5,61 @@ import H2Element from "../components/H2Element.astro";
 ---
 
 <Layout title="One Cent Sale Tax">
-  <main transition:animate="slide" class="container flex flex-col justify-center w-full ml-1 scroll-smooth">
+  <main
+    transition:animate="slide"
+    class="container flex flex-col justify-center w-full ml-1 scroll-smooth"
+  >
     <!-- <div class="flex mt-0 text-5xl font-medium leading-tight justify-center mb-5" transition:name="home-heading">
     </div> -->
     <Card href="#" title="TO DO:" body="Video will be added here." />
     <H2Element text="One Cent Sales Tax Program" />
-    <div class="border-b-2 border-r-2 border-accent py-1 px-1 m-2 flex flex-col text-md">
-      <p class="mt-2 pb-3">Also known as the "Penny Sales Tax," the One Cent Sales Tax (OCST) equates to paying one penny per $1 on a taxable item's purchase price. The taxes collected help fund roadway, infrastructure, and greenbelt preservation projects throughout Berkeley County.</p>
-      <p class="mt-2 pb-3">Berkeley County's One Cent Sales Tax Program was established in 2008. Voters passed additional referendums in 2014 and 2022, approving the continuation ofthe program. For the first time in the OCST program, the 2022 referendum provides funding for greenbelt preservation projects.</p>
-      <p class="mt-2 pb-3">Within the OCST program, the County also created the Dirt-to-Pave program,which paves roads often found in rural communities. To date, the county has completed 65 dirt-to-pave projects from both the 2008 and 2014 referendums.</p>
+    <div
+      class="border-b-2 border-r-2 border-accent py-1 px-1 m-2 flex flex-col text-md dark:text-white-text"
+    >
+      <p class="mt-2 pb-3">
+        Also known as the "Penny Sales Tax," the One Cent Sales Tax (OCST)
+        equates to paying one penny per $1 on a taxable item's purchase price.
+        The taxes collected help fund roadway, infrastructure, and greenbelt
+        preservation projects throughout Berkeley County.
+      </p>
+      <p class="mt-2 pb-3">
+        Berkeley County's One Cent Sales Tax Program was established in 2008.
+        Voters passed additional referendums in 2014 and 2022, approving the
+        continuation ofthe program. For the first time in the OCST program, the
+        2022 referendum provides funding for greenbelt preservation projects.
+      </p>
+      <p class="mt-2 pb-3">
+        Within the OCST program, the County also created the Dirt-to-Pave
+        program,which paves roads often found in rural communities. To date, the
+        county has completed 65 dirt-to-pave projects from both the 2008 and
+        2014 referendums.
+      </p>
     </div>
     <H2Element text="Sales Tax Collections" />
     <!-- container for cubes -->
-    <div class="flex flex-col gap-2 justify-center border-b-2 border-r-2 border-accent text-center m-2 lg:flex-row">
+    <div
+      class="flex flex-col gap-2 justify-center border-b-2 border-r-2 border-accent text-center m-2 md:flex-row"
+    >
       <!-- xl:flex xl:flex-row lg:flex lg:flex-row mlg:flex mlg:flex-row md:flex-col sm:flex-col -->
-      <div class="flex flex-col justify-center items-center w-42 h-48 p-10 m-5 bg-accent-dark rounded-lg shadow-lg">
+      <div
+        class="flex flex-col justify-center items-center w-42 h-48 p-10 m-5 bg-accent-dark rounded-lg shadow-lg"
+      >
         <!-- lg:w-26 lg:h-33 lg:p-4 mlg:w-22 mlg:h-28 mlg:p-2 -->
         <p class="text-xl text-accent">2008 Referendum</p>
         <hr class="w-full p-1" />
-        <p class="text-xl font-bold money " id="c-1">143 Million</p>
+        <p class="text-xl font-bold money" id="c-1">143 Million</p>
       </div>
-      <div class="flex flex-col justify-center items-center w-42 h-48 p-10 m-5 bg-accent-dark rounded-lg shadow-lg">
+      <div
+        class="flex flex-col justify-center items-center w-42 h-48 p-10 m-5 bg-accent-dark rounded-lg shadow-lg"
+      >
         <!-- lg:w-26 lg:h-33 lg:p-4 mlg:w-22 mlg:h-28 mlg:p-2 -->
         <p class="text-xl text-accent">2014 Referendum</p>
         <hr class="w-full p-1" />
         <p class="text-xl font-bold money" id="c-2">273 Million</p>
       </div>
-      <div class="flex flex-col justify-center items-center w-42 h-48 p-10 m-5 bg-accent-dark rounded-lg shadow-lg">
+      <div
+        class="flex flex-col justify-center items-center w-42 h-48 p-10 m-5 bg-accent-dark rounded-lg shadow-lg"
+      >
         <!-- lg:w-26 lg:h-33 lg:p-4 mlg:w-22 mlg:h-28 mlg:p-2 -->
         <p class="text-xl text-accent">2022 Referendum</p>
         <hr class="w-full p-1" />
@@ -39,22 +67,32 @@ import H2Element from "../components/H2Element.astro";
       </div>
     </div>
     <H2Element text="Road Projects" />
-    <div class="mt-1 border-b-2 border-r-2 border-accent p-2 pb-5 pr-5 m-2 lg:grid lg:grid-cols-2 lg:gap-3 lg:ml-4">
+    <div
+      class="mt-1 border-b-2 border-r-2 border-accent p-2 pb-5 pr-5 m-2 lg:grid lg:grid-cols-2 lg:gap-3 lg:ml-4 dark:text-white-text"
+    >
       <!-- xl:grid xl:grid-cols-2 xl:gap-5 lg:grid lg:grid-cols-2 lg:gap-4 mlg:grid mlg:grid-cols-1 mlg:gap-3 xl:text-xl lg:text-lg mlg:text-lg md:text-md sm:text-sm xsm:ml-2-->
       <ul class="list-none w-full lg:list-disc lg:p-1 xl:text-xl">
         <li class="leading-loose">Capacity (Widening) Projects</li>
         <li class="leading-loose">Major Resurfacing Projects</li>
-        <li class="leading-loose">Local Street Resurfacing (Streets to be determined through input from SCDOT, County and Municipal officials, as well as the public)</li>
+        <li class="leading-loose">
+          Local Street Resurfacing (Streets to be determined through input from
+          SCDOT, County and Municipal officials, as well as the public)
+        </li>
       </ul>
       <ul class="list-none w-full lg:list-disc lg:p-1 xl:text-xl">
         <li class="leading-loose">Intersection Improvements</li>
         <li class="leading-loose">Other Transportation Projects</li>
-        <li class="leading-loose">Paving Projects (Various dirt roads throughout the County as determined by the County governing body and staff)</li>
+        <li class="leading-loose">
+          Paving Projects (Various dirt roads throughout the County as
+          determined by the County governing body and staff)
+        </li>
       </ul>
     </div>
 
     <H2Element text="Greenbelt Preservation Projects" />
-    <div class="mt-1 border-b-2 border-r-2 border-accent p-2 pb-5 pr-5 m-2 lg:grid lg:grid-cols-2 lg:gap-3 lg:ml-4">
+    <div
+      class="mt-1 border-b-2 border-r-2 border-accent p-2 pb-5 pr-5 m-2 lg:grid lg:grid-cols-2 lg:gap-3 lg:ml-4 dark:text-white-text"
+    >
       <!-- xl:grid xl:grid-cols-2 xl:gap-5 lg:grid lg:grid-cols-2 lg:gap-4 mlg:grid mlg:grid-cols-1 mlg:gap-3 lg:text-lg mlg:text-lg md:text-md sm:text-sm xl:text-xl -->
       <ul class="list-none w-full lg:list-disc lg:p-1 xl:text-xl">
         <li class="leading-loose">Purchasing property for conservation</li>
@@ -64,20 +102,40 @@ import H2Element from "../components/H2Element.astro";
       </ul>
       <ul class="list-none w-full lg:list-disc lg:p-1 xl:text-xl">
         <li class="leading-loose">Protecting natural resources</li>
-        <li class="leading-loose"> Protecting agricultural or heritage landscapes</li>
+        <li class="leading-loose">
+          Protecting agricultural or heritage landscapes
+        </li>
         <li class="leading-loose">Protecting scenic corridors</li>
       </ul>
     </div>
     <H2Element text="Something goes here for formatting" />
-    <div class="flex gap-5 justify-center border-b-2 border-r-2 border-accent p-2 pb-5 mt-1 m-2" id="text-div-1">
-      <div class="grid xl:p-6 xl:mx-6 lg:p-4 lg:mx-4 mlg:p-1 mlg:mx-1 xsm:ml-1" id="quote-div">
-        <blockquote class="text-md italic font-semibold text-gray-900 dark:text-white" >
+    <div
+      class="flex gap-5 justify-center border-b-2 border-r-2 border-accent p-2 pb-5 mt-1 m-2"
+      id="text-div-1 dark:text-white-text"
+    >
+      <div
+        class="grid xl:p-6 xl:mx-6 lg:p-4 lg:mx-4 mlg:p-1 mlg:mx-1 xsm:ml-1"
+        id="quote-div"
+      >
+        <blockquote
+          class="text-md italic font-semibold text-gray-900 dark:text-white"
+        >
           <!-- xl:text-xl lg:text-lg lg:p-8 lg:mx-8 mlg:text-md mlg:p-1 mlg:mx-1 md:text-md -->
-          <p class="italic text-md leading-relaxed text-gray-900 dark:text-white mb-5 m-2 lg:text-lg">
-            "Each project completed not only adds to the quality of life to those directly affected, but also reduces annual maintenance costs and allows resources to be used elsewhere. Thanks to the TAXPAYER for supporting this program so we can help bring critical infrastructure improvements to our County."
+          <p
+            class="italic text-md leading-relaxed text-gray-900 dark:text-white mb-5 m-2 lg:text-lg"
+          >
+            "Each project completed not only adds to the quality of life to
+            those directly affected, but also reduces annual maintenance costs
+            and allows resources to be used elsewhere. Thanks to the TAXPAYER
+            for supporting this program so we can help bring critical
+            infrastructure improvements to our County."
           </p>
         </blockquote>
-        <p class="text-right bg-gradient-to-r from-transparent to-accent-dark text-accent p-5 border-b-2 border-r-2 border-accent"> - Johnny Cribb, Berkeley County Supervisor</p>
+        <p
+          class="text-right bg-gradient-to-r from-transparent to-accent-dark text-accent p-5 border-b-2 border-r-2 border-accent"
+        >
+          - Johnny Cribb, Berkeley County Supervisor
+        </p>
       </div>
     </div>
   </main>

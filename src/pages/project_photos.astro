@@ -1,18 +1,12 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import PhotoGallery from "../components/PhotoGallery.astro";
+import H2Element from "../components/H2Element.astro";
 ---
 
 <Layout title="Project Photos">
-  <main transition:animate="slide" class="xsm:max-w-full xsm:ml-1">
-    <div
-      class="flex mb-2 mt-0 text-5xl font-medium leading-tight justify-center"
-      transition:name="home-heading"
-    >
-      <h1 class="text-accent-dark mb-5 lg:text-3xl md:text-xl sm:text-md xsm:text-md">
-        Project Photos
-      </h1>
-    </div>
-    <PhotoGallery />
+  <main transition:animate="slide" class="container flex flex-col justify-center w-full ml-1 scroll-smooth">
+      <H2Element text="Project Photos" />
+      <PhotoGallery />
   </main>
 </Layout>
