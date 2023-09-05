@@ -12,7 +12,7 @@ import Footer from "../components/Footer.astro";
 import Main from "../components/Main.astro";
 import Breadcrumb from "../components/Breadcrumb.astro";
 import SideNav from "../components/SideNav.astro";
-import DarkMode from "../components/DarkMode.astro";
+// import DarkMode from "../components/DarkMode.astro";
 import TopNav from "../components/TopNav.astro";
 ---
 
@@ -25,6 +25,10 @@ import TopNav from "../components/TopNav.astro";
       <meta charset="UTF-8" />
       <meta name="description" content="Astro description" />
       <meta name="viewport" content="width=device-width" />
+      <!-- <script
+        is:inline
+        src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.0/flowbite.min.js"
+      ></script> -->
       <!-- <link rel="icon" type="image/svg+xml" href="/favicon.svg" /> -->
       <link rel="icon" type="png" href="/bw.png" />
       <meta name="generator" content={Astro.generator} />
@@ -41,30 +45,34 @@ import TopNav from "../components/TopNav.astro";
           document.documentElement.classList.remove("dark");
         }
       </script>
-      <ViewTransitions />
+      <!-- <ViewTransitions /> -->
     </head>
     <body>
       <div class="container w-full">
         <!-- <SideNav /> -->
         <TopNav />
         <!-- <Nav client:load /> -->
-        <DarkMode />
-      </div>
-      <!-- <Breadcrumb /> -->
-      <!-- <div class="container max-w-screen-xl mx-20"></div> -->
-      <div class="max-w-3/4 rounded-xl md:mx-5 lg:mx-7 xl:mx-11">
-        <div>
-          <div class="md:shrink-0">
-            <!-- <Main> -->
-            <slot />
-            <!-- </Main> -->
+        <!-- <DarkMode /> -->
+        <!-- </div> -->
+        <!-- <Breadcrumb /> -->
+        <!-- <div class="container max-w-screen-xl mx-20"></div> -->
+        <div class="rounded-xl">
+          <!-- <TopNav /> -->
+          <!-- <DarkMode /> -->
+          <div>
+            <div class="md:shrink-0">
+              <!-- <div> -->
+              <!-- <Main> -->
+              <slot />
+              <!-- </Main> -->
+            </div>
           </div>
         </div>
+        <Footer />
       </div>
-      <Footer />
       <script
         is:inline
-        src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.3/flowbite.min.js"
+        src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.0/flowbite.min.js"
       ></script>
       <script>
         var themeToggleDarkIcon = document.getElementById(
@@ -114,92 +122,95 @@ import TopNav from "../components/TopNav.astro";
           }
         });
       </script>
+      <script>
+        import "flowbite";
+      </script>
     </body>
+    <style is:global>
+      :root {
+        --accent: 255, 215, 0;
+        --accent-light: 88, 201, 232;
+        --accent-dark: 0, 85, 119;
+        --accent-gradient: linear-gradient(
+          45deg,
+          rgb(var(--accent)),
+          rgb(var(--accent-light)) 30%,
+          white 60%
+        );
+      }
+      html {
+        font-family:
+          system-ui,
+          -apple-system,
+          BlinkMacSystemFont,
+          "Segoe UI",
+          Roboto,
+          Oxygen,
+          Ubuntu,
+          Cantarell,
+          "Open Sans",
+          "Helvetica Neue",
+          sans-serif;
+        /* background: rgb(var(--background-gradient)); */
+        /* background-size: 224px; */
+      }
+      body {
+        background-image: radial-gradient(
+          farthest-corner circle at 0% 0%,
+          #03a9f4 0%,
+          26%,
+          #03a9f499 0% 0%,
+          47%,
+          #03a9f490 0% 0%,
+          69%,
+          #03a9f498 0% 0%,
+          89%,
+          #005475 100%
+        );
+        background-size: cover;
+        background-attachment: fixed;
+        /* background-color: #03a9f4; */
+      }
+      .dark body {
+        background-color: #000;
+      }
+      .link-card-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        grid-gap: 1rem;
+      }
+      .question-card-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        grid-gap: 1rem;
+      }
+
+      /* #####################IMg##g@ll3ry############################# */
+      .gallery {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 30px;
+        margin: 0;
+        padding: 0;
+      }
+
+      .gallery img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        opacity: 0.8;
+        box-shadow:
+          25px 25px 75px rgba(0, 0, 0, 0.25),
+          10px 10px 70px rgba(0, 0, 0, 0.25),
+          inset 5px 5px 10px rgba(0, 0, 0, 0.5),
+          inset 5px 5px 20px rgba(255, 255, 255, 0.2),
+          inset -5px -5px 15px rgba(0, 0, 0, 0.75);
+      }
+      .gallery .img-holder:hover {
+        opacity: 1;
+        filter: blur(0);
+        box-shadow: 0 0 1px 2px rgba(0, 0, 0, 0.5);
+      }
+    </style>
   </body>
-  <style is:global>
-    :root {
-      --accent: 255, 215, 0;
-      --accent-light: 88, 201, 232;
-      --accent-dark: 0, 85, 119;
-      --accent-gradient: linear-gradient(
-        45deg,
-        rgb(var(--accent)),
-        rgb(var(--accent-light)) 30%,
-        white 60%
-      );
-    }
-    html {
-      font-family:
-        system-ui,
-        -apple-system,
-        BlinkMacSystemFont,
-        "Segoe UI",
-        Roboto,
-        Oxygen,
-        Ubuntu,
-        Cantarell,
-        "Open Sans",
-        "Helvetica Neue",
-        sans-serif;
-      /* background: rgb(var(--background-gradient)); */
-      /* background-size: 224px; */
-    }
-    body {
-      background-image: radial-gradient(
-        farthest-corner circle at 0% 0%,
-        #03a9f4 0%,
-        26%,
-        #03a9f499 0% 0%,
-        47%,
-        #03a9f490 0% 0%,
-        69%,
-        #03a9f498 0% 0%,
-        89%,
-        #005475 100%
-      );
-      background-size: cover;
-      background-attachment: fixed;
-      /* background-color: #03a9f4; */
-    }
-    .dark body {
-      background-color: #000;
-    }
-    .link-card-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-      grid-gap: 1rem;
-    }
-    .question-card-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-      grid-gap: 1rem;
-    }
-
-    /* #####################IMg##g@ll3ry############################# */
-    .gallery {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 30px;
-      margin: 0;
-      padding: 0;
-    }
-
-    .gallery img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      opacity: 0.8;
-      box-shadow:
-        25px 25px 75px rgba(0, 0, 0, 0.25),
-        10px 10px 70px rgba(0, 0, 0, 0.25),
-        inset 5px 5px 10px rgba(0, 0, 0, 0.5),
-        inset 5px 5px 20px rgba(255, 255, 255, 0.2),
-        inset -5px -5px 15px rgba(0, 0, 0, 0.75);
-    }
-    .gallery .img-holder:hover {
-      opacity: 1;
-      filter: blur(0);
-      box-shadow: 0 0 1px 2px rgba(0, 0, 0, 0.5);
-    }
-  </style>
 </html>

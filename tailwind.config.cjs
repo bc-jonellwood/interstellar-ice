@@ -31,6 +31,8 @@ module.exports = {
       "bg-blue-4": "#03a9f498",
       "bg-blue-5": "#005475",
       "white-text": "#fbfbfb",
+      "light-mode-q-bg": "#1f293750",
+      "dark-mode-q-bg": "#1f2937",
     },
     container: {
       center: true,
