@@ -2,15 +2,17 @@
 import Layout from "../layouts/Layout.astro";
 import Card from "../components/Card.astro";
 import H2Element from "../components/H2Element.astro";
+// import { ViewTransitions } from "astro:transitions";
 ---
 
 <Layout title="One Cent Sale Tax">
   <main
-    transition:animate="slide"
     class="container flex flex-col justify-center w-full ml-1 scroll-smooth"
   >
-    <!-- <div class="flex mt-0 text-5xl font-medium leading-tight justify-center mb-5" transition:name="home-heading">
-    </div> -->
+    <div
+      class="flex mt-0 text-5xl font-medium leading-tight justify-center mb-5"
+    >
+    </div>
     <Card href="#" title="TO DO:" body="Video will be added here." />
     <H2Element text="One Cent Sales Tax Program" />
     <div
@@ -139,80 +141,86 @@ import H2Element from "../components/H2Element.astro";
       </div>
     </div>
   </main>
-</Layout>
 
-<script>
-  function incrementCounter(
-    selector: string,
-    current: number,
-    target: number,
-    duration: number,
-    letter: string = "",
-    symbol: string = "$"
-  ) {
-    let counter = document.getElementById(selector);
-    let stepTime = Math.abs(Math.floor(duration / target));
-    if (current < target && counter) {
-      current++;
-      counter.innerText = symbol + current.toString() + letter;
-      setTimeout(
-        () =>
-          incrementCounter(selector, current, target, duration, letter, symbol),
-        stepTime
-      );
+  <script>
+    function incrementCounter(
+      selector: string,
+      current: number,
+      target: number,
+      duration: number,
+      letter: string = "",
+      symbol: string = "$"
+    ) {
+      let counter = document.getElementById(selector);
+      let stepTime = Math.abs(Math.floor(duration / target));
+      if (current < target && counter) {
+        current++;
+        counter.innerText = symbol + current.toString() + letter;
+        setTimeout(
+          () =>
+            incrementCounter(
+              selector,
+              current,
+              target,
+              duration,
+              letter,
+              symbol
+            ),
+          stepTime
+        );
+      }
     }
-  }
-  // increment
-  incrementCounter("c-1", 0, 143, 4000, " Million", "$");
-  incrementCounter("c-2", 0, 237, 2000, " Million", "$");
-  incrementCounter("c-3", 0, 587, 500, " Million", "$");
-</script>
+    // increment
+    incrementCounter("c-1", 0, 143, 4000, " Million", "$");
+    incrementCounter("c-2", 0, 237, 2000, " Million", "$");
+    incrementCounter("c-3", 0, 587, 500, " Million", "$");
+  </script>
 
-<style>
-  #text-div-1 {
-    overflow: hidden;
-  }
+  <style>
+    #text-div-1 {
+      overflow: hidden;
+    }
 
-  .quote-holder {
-    /* transform: translateX(100%); */
-    transition: transform 0.5s ease-in-out;
-  }
+    .quote-holder {
+      /* transform: translateX(100%); */
+      transition: transform 0.5s ease-in-out;
+    }
 
-  /* Add trigger class  */
-  .quote-holder.slide-in {
-    transform: translateX(-0%);
-  }
+    /* Add trigger class  */
+    .quote-holder.slide-in {
+      transform: translateX(-0%);
+    }
 
-  .astro-a {
-    position: absolute;
-    top: -32px;
-    left: 50%;
-    transform: translatex(-50%);
-    width: 220px;
-    height: auto;
-    z-index: -1;
-  }
+    .astro-a {
+      position: absolute;
+      top: -32px;
+      left: 50%;
+      transform: translatex(-50%);
+      width: 220px;
+      height: auto;
+      z-index: -1;
+    }
 
-  .text-gradient {
-    background-image: var(--accent-gradient);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-size: 400%;
-    background-position: 0%;
-  }
+    .text-gradient {
+      background-image: var(--accent-gradient);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-size: 400%;
+      background-position: 0%;
+    }
 
-  .cube {
-    /* display: flex; */
-    /* flex-direction: column; */
-    /* width: 200px; */
-    /* height: 200px; */
-    /* border-radius: 30px; Adjust this value for more or less rounded corners */
-    /* background-color: #005677; */
-    /* padding: 10px; */
-    /* align-items: center; */
-    /* justify-content: center; */
-    /* margin-bottom: 1rem; */
-    /* box-shadow:
+    .cube {
+      /* display: flex; */
+      /* flex-direction: column; */
+      /* width: 200px; */
+      /* height: 200px; */
+      /* border-radius: 30px; Adjust this value for more or less rounded corners */
+      /* background-color: #005677; */
+      /* padding: 10px; */
+      /* align-items: center; */
+      /* justify-content: center; */
+      /* margin-bottom: 1rem; */
+      /* box-shadow:
       2.8px 2.8px 2.2px rgba(0, 0, 0, 0.02),
       6.7px 6.7px 5.3px rgba(0, 0, 0, 0.028),
       12.5px 12.5px 10px rgba(0, 0, 0, 0.035),
@@ -220,8 +228,8 @@ import H2Element from "../components/H2Element.astro";
       41.8px 41.8px 33.4px rgba(0, 0, 0, 0.05),
       100px 100px 80px rgba(0, 0, 0, 0.07),
       inset 0px 0px 30px 5px rgba(73, 72, 84, 0.9); */
-  }
-  /* .cube hr {
+    }
+    /* .cube hr {
       width: 90%;
       background-color: #58c9e8;
 
@@ -229,23 +237,24 @@ import H2Element from "../components/H2Element.astro";
       border: none;
       border-radius: 2px;
     } */
-  /* .money {
+    /* .money {
     color: #d5ca92;
     color: rgba(var(--accent));
   } */
-  .quote-holder {
-    display: grid;
-    grid-template-columns: 1fr;
-  }
-  .cite-holder {
-    align-items: right;
-    align-content: right;
-    align-self: right;
-    color: #003f55;
-    font-weight: 700;
-    background-color: #00567750;
-    background: linear-gradient(to right, #558296, #00567750);
-    text-align: right;
-    padding-right: 1rem;
-  }
-</style>
+    .quote-holder {
+      display: grid;
+      grid-template-columns: 1fr;
+    }
+    .cite-holder {
+      align-items: right;
+      align-content: right;
+      align-self: right;
+      color: #003f55;
+      font-weight: 700;
+      background-color: #00567750;
+      background: linear-gradient(to right, #558296, #00567750);
+      text-align: right;
+      padding-right: 1rem;
+    }
+  </style>
+</Layout>

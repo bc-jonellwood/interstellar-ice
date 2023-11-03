@@ -1,16 +1,18 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
-import H2Element from '../components/H2Element.astro';
+import Layout from "../layouts/Layout.astro";
+import Card from "../components/Card.astro";
+import H2Element from "../components/H2Element.astro";
 ---
+
 <Layout title="Contact Us">
-    <main transition:animate="slide" class="container flex flex-col justify-center w-full ml-1 scroll-smooth">    
-		<Card
-		href="#"
-		title="TO DO:"
-		body="Contact form maybe? Link to existing contact page?"
-		/>
-		<H2Element text="Contact Us and stuff" />
-		
-    </main>
+  <main
+    class="container flex flex-col justify-center w-full ml-1 scroll-smooth"
+  >
+    <Card
+      href="#"
+      title="TO DO:"
+      body="Contact form maybe? Link to existing contact page?"
+    />
+    <H2Element text="Contact Us and stuff" />
+  </main>
 </Layout>

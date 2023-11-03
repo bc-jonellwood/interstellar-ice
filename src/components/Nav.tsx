@@ -25,23 +25,25 @@ const itemMotionDesktop = {
     hidden: { opacity: 0, x: 0 },
 }
 const navLinks = [
-    { name: 'Home', href: '/', id: 1 },
-    { name: 'FAQ', href: '/faq', id: 2 },
-    { name: 'Projects', href: '/project_dashboard', id: 3 },
-    { name: 'Photos', href: '/project_photos', id: 4 },
-    { name: 'Roadway Petition', href: '/road_petition', id: 5 },
-    { name: 'Contact', href: '/contact', id: 6 },
+    { name: 'Home', href: '/', id: 1, data: 'data-astro-reload' },
+    { name: 'FAQ', href: '/faq', id: 2, data: 'data-astro-reload'},
+    { name: 'Projects', href: '/project_dashboard', id: 3, data: 'data-astro-reload'},
+    { name: 'Photos', href: '/project_photos', id: 4, data: 'data-astro-reload'},
+    { name: 'Roadway Petition', href: '/road_petition', id: 5, data: 'data-astro-reload'},
+    { name: 'Contact', href: '/contact', id: 6, data: 'data-astro-reload'},
 ]
 
 const NavLinks = ({
   isMobile,
-  className,
+  className
+  // data,
 }: {
   isMobile: boolean
   className: string
+  data: string
 }) => (
   <div className={className}>
-    {navLinks.map(({ name, href, id }) => (
+    {navLinks.map(({ name, href, id}) => (
       <motion.a
         key={id}
         variants={isMobile ? itemMotion : itemMotionDesktop}
@@ -104,6 +106,7 @@ export default function Nav() {
           <NavLinks
             className="flex flex-col gap-24 text-lg"
             isMobile={true}
+            data='data-astro-reload'
           />
         </motion.div>
       )}
@@ -112,7 +115,7 @@ export default function Nav() {
         initial={{ opacity: 0, x: 25 }}
         transition={{ delay: 0.35 }}
         className="hidden xl:flex xl:items-center xl:justify-center xl:gap-10 xl:text-lg">
-        <NavLinks className="flex gap-12" isMobile={false} />
+        <NavLinks className="flex gap-12" isMobile={false} data='data-astro-reload'/>
       </motion.div>
 
       {/* Hamburger Toggle */}

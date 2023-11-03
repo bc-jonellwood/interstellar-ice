@@ -1,0 +1,58 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Card from "../components/Card.astro";
+---
+
+<html lang="en-GB">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="/icon.svg" type="image/svg+xml" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Astro JS 404 Page</title>
+  </head>
+  <body>
+    <Layout title="Four Oh Four">
+      <main
+        class="container flex flex-col justify-center w-3/4 ml-1 scroll-smooth"
+      >
+        <section class="content grid grid-rows-2 justify-center align-middle">
+          <p
+            class="bg-clip-text text-transparent bg-gradient-to-r from-purple-600 to-blue-500 text-9xl font-bold mb-2 text-center"
+          >
+            404
+          </p>
+          <p class="text-2xl text-center mb-2">
+            Our Devs must have been asleep at the wheel because we can't find
+            the page you're looking for
+          </p>
+
+          <img
+            src="/asleep.png"
+            alt="A Sad Agnes who is sad because of this 404 error"
+            class="mx-auto w-1/2"
+          />
+          <button
+            class="relative inline-flex items-center justify-center p-0.5 mb-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-purple-600 to-blue-500 group-hover:from-purple-600 group-hover:to-blue-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800"
+          >
+            <span
+              class="relative px-5 py-2.5 transition-all ease-in duration-75 rounded-md group-hover:bg-opacity-0"
+            >
+              <a
+                aria-label="Return to home page"
+                href="/"
+                class="bg-transparent"
+              >
+                Take me home</a
+              >
+            </span>
+          </button>
+          <!-- <p class="text-xl">
+            &hellip; <a aria-label="Return to home page" href="/"
+              >Take me home</a
+            >
+          </p> -->
+        </section>
+      </main>
+    </Layout>
+  </body>
+</html>
